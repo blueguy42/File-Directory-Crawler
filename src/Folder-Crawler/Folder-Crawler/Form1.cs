@@ -196,17 +196,35 @@ namespace Folder_Crawler
             {
                 WarningLabel.Visible = false;
                 PohonLabel.Visible = true;
+                BatalButton.Visible = true;
+                // Run algorithm
                 String[] dirPath = Algorithm.RunAlgorithm(fileName, rootPath, findAllOccurrence, algorithm);
-                string data = "";
 
-                foreach (string path in dirPath)
+                // Ketemu
+                if (dirPath.Length > 0)
                 {
-                    data += path + "\n";
+                    DitemukanLabel.Text = "Ketemu!";
+                    DitemukanLabel.Visible = true;
+                    string data = "";
+
+                    foreach (string path in dirPath)
+                    {
+                        data += path + "\n";
+                    }
+
+                    HasilLabel.Text = dirPath[0];
+                    kryptonLabel4.Text = data;
+                    kryptonLabel4.AutoSize = true;
+                } else // Ga ketemu
+                {
+                    DitemukanLabel.Text = "File tidak ditemukan :(";
+                    DitemukanLabel.Visible = true;
                 }
 
-                kryptonLinkLabel1.Text = dirPath[0];
-                kryptonLabel4.Text = data;
-                kryptonLabel4.AutoSize = true;
+                // Time Spent UBAH INI
+                TimeLabel.Text = "0" + "s";
+                TimeLabel.Visible = true;
+                TimeTitleLable.Visible = true;
             }
         }
 
@@ -233,7 +251,18 @@ namespace Folder_Crawler
 
         private void kryptonLinkLabel1_LinkClicked(object sender, EventArgs e)
         {
-            System.Diagnostics.Process.Start("explorer.exe", Path.GetDirectoryName(kryptonLinkLabel1.Text));
+            System.Diagnostics.Process.Start("explorer.exe", Path.GetDirectoryName(HasilLabel.Text));
+        }
+
+        private void kryptonLabel3_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void WelcomeLabel_Paint(object sender, PaintEventArgs e)
+        {
+            WelcomeLabel.Text = "  Isi masukan terlebih dahulu, kemudian tekan tombol 'Mulai Pencarian!'\n untuk mulai menanam pohon DFS-BFS pertamamu! (Maksudnya,\n mulai mencari file hehe)";
+            kryptonLabel4.AutoSize = true;
         }
     }
 }
