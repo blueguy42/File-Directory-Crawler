@@ -7,8 +7,8 @@ namespace ConsoleUI
     {
         static void Main(string[] args)
         {
-            string fileName = "Mekari Next Level Intership_Technical Test_Rio Alexander Audino.pdf";
-            string rootPath = @"C:\Users\rioau\Documents\ITB\Internship";
+            string fileName = "Y.txt";
+            string rootPath = @"C:\Users\rioau\Documents\ITB\2Tingkat 2\Sem2\Tugas\STIMA\Folder-Crawler\test";
 
 
             string[] targetPath = new String[] { };
