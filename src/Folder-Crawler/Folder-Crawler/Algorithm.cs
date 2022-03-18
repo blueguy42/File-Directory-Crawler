@@ -6,50 +6,93 @@ using System.Threading.Tasks;
 
 namespace Folder_Crawler_Algo
 {
+    // Ini mending file dipisah apa engga ya
+    public class parentAndChild
+    {
+        string parentPath;
+        string parentName;
+        string[] childPath;
+        string[] childName;
+
+        public parentAndChild()
+        {
+            parentPath = "";
+            parentName = "";
+            childPath = new string[] { };
+            childName = new string[] { };
+        }
+
+        public parentAndChild(string parentPath, string[] childPath)
+        {
+            this.parentPath = parentPath;   
+            this.parentName = Path.GetFileName(parentPath); ; 
+            this.childPath = childPath;
+            this.childName = new string[] { };
+
+            foreach (var child in childPath)
+            {
+                this.childName = this.childName.Concat(new String[] { Path.GetFileName(child) }).ToArray();
+            }
+        }
+
+        public string getParentPath()
+        {
+            return this.parentPath;
+        }
+
+        public string getParentName()
+        {
+            return this.parentName; 
+        }
+
+        public string[] getChildPath()
+        {
+            return this.childPath;
+        }
+        public string[] getChildName()
+        {
+            return this.childName;
+        }
+    }
+
     class Algorithm
     {
-        public static String[] RunAlgorithm(string fileName, string rootPath, Boolean findAllOccurrence, int algorithm)
+        public static void RunAlgorithm(string fileName, string rootPath, Boolean findAllOccurrence, int algorithm, ref string[] dirPath, ref parentAndChild[] parentAndChildren)
         {
             /*
-            string fileName = "X.txt";
-            string rootPath = @"C:\Users\rioau\Documents\ITB\2Tingkat 2\Sem2\Tugas\STIMA\Folder-Crawler\test";
-            Boolean findAllOccurrence = false
-            int algorithm = 1; //0 for BFS, 1 for DFS
+            parentAndChild = {{parent_path}, {parent_name}, {child_path}, {child_name}}
             */
 
-
+            // Store all target file path
             string[] targetPath = new String[] { };
-            string[] dirPath = new string[] { };
+            
 
             //Change DFS or BFS
+            BFSorDFS(algorithm, fileName, rootPath, ref targetPath, findAllOccurrence, ref dirPath, ref parentAndChildren);
+            
+            //Debugging
+            dirPath = dirPath.Concat(new String[] { "===================================" }).ToArray();
+            dirPath = dirPath.Concat(targetPath).ToArray();
+                       
+        }
+
+        static void BFSorDFS(int algorithm, string fileName, string rootPath, ref string[] targetPath, Boolean findAllOccurrence, ref string[] dirPath, ref parentAndChild[] parentAndChildren)
+        {
+            String[] allDirPath = new string[] { };
+
             if (algorithm == 0)
             {
-                BFS(fileName, rootPath, ref targetPath, findAllOccurrence, ref dirPath);
+                getAllDirsBFS(rootPath, ref allDirPath, ref parentAndChildren);
             }
             else if (algorithm == 1)
             {
-                DFS(fileName, rootPath, ref targetPath, findAllOccurrence, ref dirPath);
+                getAllDirsDFS(rootPath, ref allDirPath, ref parentAndChildren);
             }
-                  
-            Console.WriteLine("===================================");
-            dirPath = dirPath.Concat(new String[] { "===================================" }).ToArray();
-            dirPath = dirPath.Concat(targetPath).ToArray();
-            
-            Console.ReadLine();
+              ;
 
-            return dirPath;
-            
-        }
-
-        static void DFS(string fileName, string rootPath, ref string[] targetPath, Boolean findAllOccurrence, ref string[] dirPath)
-        {
-            getAllDirsDFS(rootPath, ref dirPath);
-
-            foreach (var dir in dirPath)
+            foreach (var dir in allDirPath)
             {
-                //Print current dir to check
-                Console.WriteLine(dir);
-
+                dirPath = dirPath.Concat(new String[] { dir }).ToArray();
                 if (CheckFileInsideFolder(fileName, dir))
                 {
                     //File exisst in root 
@@ -62,9 +105,11 @@ namespace Folder_Crawler_Algo
                 }
             }
         }
-        static void getAllDirsDFS(String rootPath, ref String[] allDirs)
+        static void getAllDirsDFS(String rootPath, ref String[] allDirs, ref parentAndChild[] parentAndChildren)
         {
-            List<string> tempDirs = Directory.GetDirectories(rootPath).ToList();
+            allDirs = new string[] { rootPath };
+            List<string> tempDirs = allDirs.ToList();
+           
 
             int i = 0;
 
@@ -80,6 +125,14 @@ namespace Folder_Crawler_Algo
                     tempDirs.Insert(i + j, newDir);
                     j++;
                 }
+
+                //Add to parent and child list
+                if (allNewDir.Length != 0)
+                {
+                    parentAndChild newParentAndChild = new parentAndChild(dir, allNewDir);
+                    parentAndChildren = parentAndChildren.Concat(new parentAndChild[] { newParentAndChild }).ToArray();
+                }
+
                 i++;
             }
 
@@ -87,35 +140,10 @@ namespace Folder_Crawler_Algo
 
             allDirs = tempDirs.ToArray();
         }
-
-
-        static void BFS(String fileName, String rootPath, ref String[] targetPath, Boolean findAllOccurrence, ref string[] dirPath)
-        {
-            getAllDirsBFS(rootPath, ref dirPath);
-
-            foreach (var dir in dirPath)
-            {
-                //Print current dir to check
-                Console.WriteLine(dir);
-
-                if (CheckFileInsideFolder(fileName, dir))
-                {
-                    //File exisst in root 
-                    targetPath = targetPath.Concat(new String[] { Path.Combine(dir, fileName) }).ToArray();
-
-                    if (!findAllOccurrence)
-                    {
-                        break; // To Stop after target found
-                    }
-                }
-            }
-        }
-
-        static void getAllDirsBFS(String rootPath, ref String[] allDirs)
+        static void getAllDirsBFS(String rootPath, ref String[] allDirs, ref parentAndChild[] parentAndChildren)
         {
             allDirs = new string[] { rootPath };
-            allDirs = allDirs.Concat(Directory.GetDirectories(rootPath)).ToArray();
-            int i = 1;
+            int i = 0;
 
             //List all of dirs by BFS
             while (i < allDirs.Length)
@@ -123,6 +151,14 @@ namespace Folder_Crawler_Algo
                 String dir = allDirs[i];
                 String[] allNewDir = Directory.GetDirectories(dir);
                 allDirs = allDirs.Concat(allNewDir).ToArray();
+
+                //Add to parent and child list
+                if (allNewDir.Length != 0)
+                {
+                    parentAndChild newParentAndChild = new parentAndChild(dir, allNewDir);
+                    parentAndChildren = parentAndChildren.Concat(new parentAndChild[] { newParentAndChild }).ToArray();
+                }
+
                 i++;
             }
         }

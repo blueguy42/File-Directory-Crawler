@@ -181,6 +181,7 @@ namespace Folder_Crawler
             string fileName = kryptonTextBox1.Text;
             string rootPath = FolderLabel.Text;
             Boolean findAllOccurrence = SemuaFileCheck.Checked;
+            parentAndChild[] parentAndChildren = new parentAndChild[] { }; //perlu dibenerin
             int algorithm = -1; //0 for BFS, 1 for DFS
             if (BFS.Checked) {
                 algorithm = 0;
@@ -192,20 +193,43 @@ namespace Folder_Crawler
             if (fileName == "" || rootPath == "" || algorithm == -1)
             {
                 WarningLabel.Visible = true;
-            } else
+            } 
+            else
             {
                 WarningLabel.Visible = false;
                 PohonLabel.Visible = true;
-                String[] dirPath = Algorithm.RunAlgorithm(fileName, rootPath, findAllOccurrence, algorithm);
-                string data = "";
+                String[] dirPath = new string[] { };
+                
+                //Run Algorithm
+                Algorithm.RunAlgorithm(fileName, rootPath, findAllOccurrence, algorithm, ref dirPath, ref parentAndChildren);
+                
+                // Debugging dirPath
+                string data1 = "";
 
                 foreach (string path in dirPath)
                 {
-                    data += path + "\n";
+                    data1 += path + "\n";
                 }
 
+                // Debugging parent and child node
+                string data2 = "";
+
+                foreach (parentAndChild parentAndChild in parentAndChildren)
+                {
+                    data2 += parentAndChild.getParentPath() + " <-> " + parentAndChild.getParentName() + "\n";
+                    
+                    for(int i = 0; i < parentAndChild.getChildPath().Length; i++)
+                    {
+                        data2 +=    "        " + 
+                                    parentAndChild.getChildPath()[i] +
+                                    " <-> " + 
+                                    parentAndChild.getChildName()[i] +  "\n";
+                    }
+                }
+
+                
                 kryptonLinkLabel1.Text = dirPath[0];
-                kryptonLabel4.Text = data;
+                kryptonLabel4.Text = data2;
                 kryptonLabel4.AutoSize = true;
             }
         }
