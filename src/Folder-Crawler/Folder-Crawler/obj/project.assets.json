@@ -334,19 +334,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\rioau\\.nuget\\packages\\": {}
+    "C:\\Users\\acer\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\rioau\\Documents\\ITB\\2Tingkat 2\\Sem2\\Tugas\\STIMA\\Folder-Crawler\\src\\Folder-Crawler\\Folder-Crawler\\Folder-Crawler.csproj",
+      "projectUniqueName": "D:\\Cave\\Semester4\\Folder-Crawler\\src\\Folder-Crawler\\Folder-Crawler\\Folder-Crawler.csproj",
       "projectName": "Folder-Crawler",
-      "projectPath": "C:\\Users\\rioau\\Documents\\ITB\\2Tingkat 2\\Sem2\\Tugas\\STIMA\\Folder-Crawler\\src\\Folder-Crawler\\Folder-Crawler\\Folder-Crawler.csproj",
-      "packagesPath": "C:\\Users\\rioau\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\rioau\\Documents\\ITB\\2Tingkat 2\\Sem2\\Tugas\\STIMA\\Folder-Crawler\\src\\Folder-Crawler\\Folder-Crawler\\obj\\",
+      "projectPath": "D:\\Cave\\Semester4\\Folder-Crawler\\src\\Folder-Crawler\\Folder-Crawler\\Folder-Crawler.csproj",
+      "packagesPath": "C:\\Users\\acer\\.nuget\\packages\\",
+      "outputPath": "D:\\Cave\\Semester4\\Folder-Crawler\\src\\Folder-Crawler\\Folder-Crawler\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\rioau\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\acer\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -423,7 +423,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.201\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.200\\RuntimeIdentifierGraph.json"
       }
     }
   },
