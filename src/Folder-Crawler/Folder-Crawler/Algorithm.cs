@@ -1,44 +1,51 @@
 ﻿using System;
-using System.IO;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
-namespace Folder_Crawler_Code
+namespace Folder_Crawler_Algo
 {
-    class Program
+    class Algorithm
     {
-        static void Main(string[] args)
+        public static String[] RunAlgorithm(string fileName, string rootPath, Boolean findAllOccurrence, int algorithm)
         {
+            /*
             string fileName = "X.txt";
             string rootPath = @"C:\Users\rioau\Documents\ITB\2Tingkat 2\Sem2\Tugas\STIMA\Folder-Crawler\test";
-            Boolean findAllOccurrence = false;
+            Boolean findAllOccurrence = false
             int algorithm = 1; //0 for BFS, 1 for DFS
+            */
 
 
             string[] targetPath = new String[] { };
+            string[] dirPath = new string[] { };
 
             //Change DFS or BFS
             if (algorithm == 0)
             {
-                BFS(fileName, rootPath, ref targetPath, findAllOccurrence);
+                BFS(fileName, rootPath, ref targetPath, findAllOccurrence, ref dirPath);
             }
             else if (algorithm == 1)
             {
-                DFS(fileName, rootPath, ref targetPath, findAllOccurrence);
+                DFS(fileName, rootPath, ref targetPath, findAllOccurrence, ref dirPath);
             }
-
+                  
             Console.WriteLine("===================================");
-            foreach (String path in targetPath)
-            {
-                Console.WriteLine(path);
-            }
+            dirPath = dirPath.Concat(new String[] { "===================================" }).ToArray();
+            dirPath = dirPath.Concat(targetPath).ToArray();
+            
             Console.ReadLine();
+
+            return dirPath;
+            
         }
 
-        static void DFS(string fileName, string rootPath, ref string[] targetPath, Boolean findAllOccurrence)
+        static void DFS(string fileName, string rootPath, ref string[] targetPath, Boolean findAllOccurrence, ref string[] dirPath)
         {
-            String[] listOfDirs = new String[] { };
-            getAllDirsDFS(rootPath, ref listOfDirs);
+            getAllDirsDFS(rootPath, ref dirPath);
 
-            foreach (var dir in listOfDirs)
+            foreach (var dir in dirPath)
             {
                 //Print current dir to check
                 Console.WriteLine(dir);
@@ -46,7 +53,7 @@ namespace Folder_Crawler_Code
                 if (CheckFileInsideFolder(fileName, dir))
                 {
                     //File exisst in root 
-                    targetPath = targetPath.Concat(new String[] { Path.Combine(rootPath, fileName) }).ToArray();
+                    targetPath = targetPath.Concat(new String[] { Path.Combine(dir, fileName) }).ToArray();
 
                     if (!findAllOccurrence)
                     {
@@ -82,12 +89,11 @@ namespace Folder_Crawler_Code
         }
 
 
-        static void BFS(String fileName, String rootPath, ref String[] targetPath, Boolean findAllOccurrence)
+        static void BFS(String fileName, String rootPath, ref String[] targetPath, Boolean findAllOccurrence, ref string[] dirPath)
         {
-            String[] listOfDirs = new String[] { };
-            getAllDirsBFS(rootPath, ref listOfDirs);
+            getAllDirsBFS(rootPath, ref dirPath);
 
-            foreach (var dir in listOfDirs)
+            foreach (var dir in dirPath)
             {
                 //Print current dir to check
                 Console.WriteLine(dir);
@@ -95,7 +101,7 @@ namespace Folder_Crawler_Code
                 if (CheckFileInsideFolder(fileName, dir))
                 {
                     //File exisst in root 
-                    targetPath = targetPath.Concat(new String[] { Path.Combine(rootPath, fileName) }).ToArray();
+                    targetPath = targetPath.Concat(new String[] { Path.Combine(dir, fileName) }).ToArray();
 
                     if (!findAllOccurrence)
                     {
@@ -132,7 +138,7 @@ namespace Folder_Crawler_Code
                     return true;
                 }
             }
-              
+
 
             return false;
         }
