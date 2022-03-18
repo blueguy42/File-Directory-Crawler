@@ -7,13 +7,14 @@ namespace ConsoleUI
     {
         static void Main(string[] args)
         {
-            string fileName = "X.txt";
-            string rootPath = @"C:\Users\rioau\Documents\ITB\2Tingkat 2\Sem2\Tugas\STIMA\Folder-Crawler\test";
+            string fileName = "Mekari Next Level Intership_Technical Test_Rio Alexander Audino.pdf";
+            string rootPath = @"C:\Users\rioau\Documents\ITB\Internship";
+
 
             string[] targetPath = new String[] { };
 
             //Change DFS or BFS
-            DFS(fileName, rootPath, ref targetPath);
+            BFS(fileName, rootPath, ref targetPath);
 
             Console.WriteLine("===================================");
             foreach (String path in targetPath)
@@ -61,6 +62,9 @@ namespace ConsoleUI
                 }
                 i++;
             }
+
+            tempDirs.Insert(0, rootPath);
+
             allDirs = tempDirs.ToArray();
         }
 
@@ -86,8 +90,9 @@ namespace ConsoleUI
 
         static void getAllDirsBFS(String rootPath, ref String[] allDirs)
         {
-            allDirs = Directory.GetDirectories(rootPath);
-            int i = 0;
+            allDirs = new string[] { rootPath };
+            allDirs = allDirs.Concat(Directory.GetDirectories(rootPath)).ToArray();
+            int i = 1;
 
             //List all of dirs by BFS
             while (i < allDirs.Length)
@@ -110,6 +115,7 @@ namespace ConsoleUI
                     return true;
                 }
             }
+              
 
             return false;
         }
