@@ -7,14 +7,23 @@ namespace ConsoleUI
     {
         static void Main(string[] args)
         {
-            string fileName = "Y.txt";
+            string fileName = "Xs.txt";
             string rootPath = @"C:\Users\rioau\Documents\ITB\2Tingkat 2\Sem2\Tugas\STIMA\Folder-Crawler\test";
+            Boolean findAllOccurrence = false;
+            int algorithm = 1; //0 for BFS, 1 for DFS
 
 
             string[] targetPath = new String[] { };
 
             //Change DFS or BFS
-            BFS(fileName, rootPath, ref targetPath);
+            if (algorithm == 0)
+            {
+                BFS(fileName, rootPath, ref targetPath, findAllOccurrence);
+            }
+            else if (algorithm == 1)
+            {
+                DFS(fileName, rootPath, ref targetPath, findAllOccurrence);
+            }
 
             Console.WriteLine("===================================");
             foreach (String path in targetPath)
@@ -24,7 +33,7 @@ namespace ConsoleUI
             Console.ReadLine();
         }
 
-        static void DFS(string fileName, string rootPath, ref string[] targetPath)
+        static void DFS(string fileName, string rootPath, ref string[] targetPath, Boolean findAllOccurrence)
         {
             String[] listOfDirs = new String[] { };
             getAllDirsDFS(rootPath, ref listOfDirs);
@@ -38,7 +47,11 @@ namespace ConsoleUI
                 {
                     //File exisst in root 
                     targetPath = targetPath.Concat(new String[] { Path.Combine(rootPath, fileName) }).ToArray();
-                    // break; // To Stop after target found
+
+                    if (!findAllOccurrence)
+                    {
+                        break; // To Stop after target found
+                    }
                 }
             }
         }
@@ -69,7 +82,7 @@ namespace ConsoleUI
         }
 
 
-        static void BFS(String fileName, String rootPath, ref String[] targetPath)
+        static void BFS(String fileName, String rootPath, ref String[] targetPath, Boolean findAllOccurrence)
         {
             String[] listOfDirs = new String[] { };
             getAllDirsBFS(rootPath, ref listOfDirs);
@@ -83,7 +96,11 @@ namespace ConsoleUI
                 {
                     //File exisst in root 
                     targetPath = targetPath.Concat(new String[] { Path.Combine(rootPath, fileName) }).ToArray();
-                    // break; // To Stop after target found
+
+                    if (!findAllOccurrence)
+                    {
+                        break; // To Stop after target found
+                    }
                 }
             }
         }
