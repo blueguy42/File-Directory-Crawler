@@ -57,15 +57,12 @@ namespace Folder_Crawler_Algo
 
     class Algorithm
     {
-        public static void RunAlgorithm(string fileName, string rootPath, Boolean findAllOccurrence, int algorithm, ref string[] dirPath, ref parentAndChild[] parentAndChildren)
+        public static void RunAlgorithm(string fileName, string rootPath, Boolean findAllOccurrence, int algorithm, ref string[] targetPath, ref string[] dirPath, ref parentAndChild[] parentAndChildren)
         {
             /*
             parentAndChild = {{parent_path}, {parent_name}, {child_path}, {child_name}}
             */
-
-            // Store all target file path
-            string[] targetPath = new String[] { };
-            
+                        
 
             //Change DFS or BFS
             BFSorDFS(algorithm, fileName, rootPath, ref targetPath, findAllOccurrence, ref dirPath, ref parentAndChildren);
