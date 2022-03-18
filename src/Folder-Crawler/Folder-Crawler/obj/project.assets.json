@@ -1,0 +1,442 @@
+{
+  "version": 3,
+  "targets": {
+    "net6.0-windows7.0": {
+      "Krypton.Docking/60.22.2.32": {
+        "type": "package",
+        "dependencies": {
+          "Krypton.Navigator": "60.22.2.32",
+          "Krypton.Toolkit": "60.22.2.32",
+          "Krypton.Workspace": "60.22.2.32"
+        },
+        "compile": {
+          "lib/net6.0-windows7.0/Krypton.Docking.dll": {}
+        },
+        "runtime": {
+          "lib/net6.0-windows7.0/Krypton.Docking.dll": {}
+        },
+        "frameworkReferences": [
+          "Microsoft.WindowsDesktop.App.WindowsForms"
+        ]
+      },
+      "Krypton.Navigator/60.22.2.32": {
+        "type": "package",
+        "dependencies": {
+          "Krypton.Toolkit": "60.22.2.32"
+        },
+        "compile": {
+          "lib/net6.0-windows7.0/Krypton.Navigator.dll": {}
+        },
+        "runtime": {
+          "lib/net6.0-windows7.0/Krypton.Navigator.dll": {}
+        },
+        "frameworkReferences": [
+          "Microsoft.WindowsDesktop.App.WindowsForms"
+        ]
+      },
+      "Krypton.Ribbon/60.22.2.32": {
+        "type": "package",
+        "dependencies": {
+          "Krypton.Toolkit": "60.22.2.32"
+        },
+        "compile": {
+          "lib/net6.0-windows7.0/Krypton.Ribbon.dll": {}
+        },
+        "runtime": {
+          "lib/net6.0-windows7.0/Krypton.Ribbon.dll": {}
+        },
+        "frameworkReferences": [
+          "Microsoft.WindowsDesktop.App.WindowsForms"
+        ]
+      },
+      "Krypton.Toolkit/60.22.2.32": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0-windows7.0/Krypton.Toolkit.dll": {}
+        },
+        "runtime": {
+          "lib/net6.0-windows7.0/Krypton.Toolkit.dll": {}
+        },
+        "frameworkReferences": [
+          "Microsoft.WindowsDesktop.App.WindowsForms"
+        ]
+      },
+      "Krypton.Workspace/60.22.2.32": {
+        "type": "package",
+        "dependencies": {
+          "Krypton.Navigator": "60.22.2.32",
+          "Krypton.Toolkit": "60.22.2.32"
+        },
+        "compile": {
+          "lib/net6.0-windows7.0/Krypton.Workspace.dll": {}
+        },
+        "runtime": {
+          "lib/net6.0-windows7.0/Krypton.Workspace.dll": {}
+        },
+        "frameworkReferences": [
+          "Microsoft.WindowsDesktop.App.WindowsForms"
+        ]
+      },
+      "KryptonPaletteSelectors/1.2.2": {
+        "type": "package",
+        "compile": {
+          "lib/UserControls.Krypton.PaletteSelectors.dll": {}
+        },
+        "runtime": {
+          "lib/UserControls.Krypton.PaletteSelectors.dll": {}
+        }
+      },
+      "MaterialDesignColors/2.0.4": {
+        "type": "package",
+        "compile": {
+          "lib/netcoreapp3.1/MaterialDesignColors.dll": {}
+        },
+        "runtime": {
+          "lib/netcoreapp3.1/MaterialDesignColors.dll": {}
+        }
+      },
+      "MaterialDesignThemes/4.3.0": {
+        "type": "package",
+        "dependencies": {
+          "MaterialDesignColors": "[2.0.4, 3.0.0)"
+        },
+        "compile": {
+          "lib/netcoreapp3.1/MaterialDesignThemes.Wpf.dll": {}
+        },
+        "runtime": {
+          "lib/netcoreapp3.1/MaterialDesignThemes.Wpf.dll": {}
+        },
+        "build": {
+          "build/MaterialDesignThemes.targets": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Krypton.Docking/60.22.2.32": {
+      "sha512": "j8Jq71WcJfuT6sOFSstms351nKR7R3pU/OvQYtSOheGGSv3VbkVOZ7wxZOMbVm1iEtI7Iib0uoNbwhB6D29yQQ==",
+      "type": "package",
+      "path": "krypton.docking/60.22.2.32",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Krypton Stable.png",
+        "krypton.docking.60.22.2.32.nupkg.sha512",
+        "krypton.docking.nuspec",
+        "lib/net462/Krypton.Docking.dll",
+        "lib/net462/Krypton.Docking.xml",
+        "lib/net47/Krypton.Docking.dll",
+        "lib/net47/Krypton.Docking.xml",
+        "lib/net471/Krypton.Docking.dll",
+        "lib/net471/Krypton.Docking.xml",
+        "lib/net472/Krypton.Docking.dll",
+        "lib/net472/Krypton.Docking.xml",
+        "lib/net48/Krypton.Docking.dll",
+        "lib/net48/Krypton.Docking.xml",
+        "lib/net5.0-windows7.0/Krypton.Docking.dll",
+        "lib/net5.0-windows7.0/Krypton.Docking.xml",
+        "lib/net6.0-windows7.0/Krypton.Docking.dll",
+        "lib/net6.0-windows7.0/Krypton.Docking.xml",
+        "lib/netcoreapp3.1/Krypton.Docking.dll",
+        "lib/netcoreapp3.1/Krypton.Docking.xml"
+      ]
+    },
+    "Krypton.Navigator/60.22.2.32": {
+      "sha512": "TFX7PAv3l44lhtmuOjTrw9aM3qCvEsUz5cYIRygaMl0Ff86nkpVYtVnKwWM3tTKnT8M/qS3Kg6meNhOED67s0w==",
+      "type": "package",
+      "path": "krypton.navigator/60.22.2.32",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Krypton Stable.png",
+        "krypton.navigator.60.22.2.32.nupkg.sha512",
+        "krypton.navigator.nuspec",
+        "lib/net462/Krypton.Navigator.dll",
+        "lib/net462/Krypton.Navigator.xml",
+        "lib/net47/Krypton.Navigator.dll",
+        "lib/net47/Krypton.Navigator.xml",
+        "lib/net471/Krypton.Navigator.dll",
+        "lib/net471/Krypton.Navigator.xml",
+        "lib/net472/Krypton.Navigator.dll",
+        "lib/net472/Krypton.Navigator.xml",
+        "lib/net48/Krypton.Navigator.dll",
+        "lib/net48/Krypton.Navigator.xml",
+        "lib/net5.0-windows7.0/Krypton.Navigator.dll",
+        "lib/net5.0-windows7.0/Krypton.Navigator.xml",
+        "lib/net6.0-windows7.0/Krypton.Navigator.dll",
+        "lib/net6.0-windows7.0/Krypton.Navigator.xml",
+        "lib/netcoreapp3.1/Krypton.Navigator.dll",
+        "lib/netcoreapp3.1/Krypton.Navigator.xml"
+      ]
+    },
+    "Krypton.Ribbon/60.22.2.32": {
+      "sha512": "KGMl/OvvEybW6msPvBaB5dRmxFL8NapqYZJy2rJdpl17NcQuYidn2CQyz+Z+oEUxHOJyFfHsx+Xsu9ppQefzGw==",
+      "type": "package",
+      "path": "krypton.ribbon/60.22.2.32",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Krypton Stable.png",
+        "krypton.ribbon.60.22.2.32.nupkg.sha512",
+        "krypton.ribbon.nuspec",
+        "lib/net462/Krypton.Ribbon.dll",
+        "lib/net462/Krypton.Ribbon.xml",
+        "lib/net47/Krypton.Ribbon.dll",
+        "lib/net47/Krypton.Ribbon.xml",
+        "lib/net471/Krypton.Ribbon.dll",
+        "lib/net471/Krypton.Ribbon.xml",
+        "lib/net472/Krypton.Ribbon.dll",
+        "lib/net472/Krypton.Ribbon.xml",
+        "lib/net48/Krypton.Ribbon.dll",
+        "lib/net48/Krypton.Ribbon.xml",
+        "lib/net5.0-windows7.0/Krypton.Ribbon.dll",
+        "lib/net5.0-windows7.0/Krypton.Ribbon.xml",
+        "lib/net6.0-windows7.0/Krypton.Ribbon.dll",
+        "lib/net6.0-windows7.0/Krypton.Ribbon.xml",
+        "lib/netcoreapp3.1/Krypton.Ribbon.dll",
+        "lib/netcoreapp3.1/Krypton.Ribbon.xml"
+      ]
+    },
+    "Krypton.Toolkit/60.22.2.32": {
+      "sha512": "S0frJcQ1oUBOdlyAblIh7mpEr+6/Yi9xisFXfM55WOje0122Qye9jp/4UVKPCp889jmwZbEgXOGjdDOyzX8Ycg==",
+      "type": "package",
+      "path": "krypton.toolkit/60.22.2.32",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Krypton Stable.png",
+        "krypton.toolkit.60.22.2.32.nupkg.sha512",
+        "krypton.toolkit.nuspec",
+        "lib/net462/Krypton.Toolkit.dll",
+        "lib/net462/Krypton.Toolkit.xml",
+        "lib/net47/Krypton.Toolkit.dll",
+        "lib/net47/Krypton.Toolkit.xml",
+        "lib/net471/Krypton.Toolkit.dll",
+        "lib/net471/Krypton.Toolkit.xml",
+        "lib/net472/Krypton.Toolkit.dll",
+        "lib/net472/Krypton.Toolkit.xml",
+        "lib/net48/Krypton.Toolkit.dll",
+        "lib/net48/Krypton.Toolkit.xml",
+        "lib/net5.0-windows7.0/Krypton.Toolkit.dll",
+        "lib/net5.0-windows7.0/Krypton.Toolkit.xml",
+        "lib/net6.0-windows7.0/Krypton.Toolkit.dll",
+        "lib/net6.0-windows7.0/Krypton.Toolkit.xml",
+        "lib/netcoreapp3.1/Krypton.Toolkit.dll",
+        "lib/netcoreapp3.1/Krypton.Toolkit.xml"
+      ]
+    },
+    "Krypton.Workspace/60.22.2.32": {
+      "sha512": "VWUJhI+cACvjYkMY6T+XAE3P8/ArOiWD9DJToOI6GVG9i3JLgMD/RXkjyDg3VBIN3njfQfmWKruw3FXxeElrgQ==",
+      "type": "package",
+      "path": "krypton.workspace/60.22.2.32",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Krypton Stable.png",
+        "krypton.workspace.60.22.2.32.nupkg.sha512",
+        "krypton.workspace.nuspec",
+        "lib/net462/Krypton.Workspace.dll",
+        "lib/net462/Krypton.Workspace.xml",
+        "lib/net47/Krypton.Workspace.dll",
+        "lib/net47/Krypton.Workspace.xml",
+        "lib/net471/Krypton.Workspace.dll",
+        "lib/net471/Krypton.Workspace.xml",
+        "lib/net472/Krypton.Workspace.dll",
+        "lib/net472/Krypton.Workspace.xml",
+        "lib/net48/Krypton.Workspace.dll",
+        "lib/net48/Krypton.Workspace.xml",
+        "lib/net5.0-windows7.0/Krypton.Workspace.dll",
+        "lib/net5.0-windows7.0/Krypton.Workspace.xml",
+        "lib/net6.0-windows7.0/Krypton.Workspace.dll",
+        "lib/net6.0-windows7.0/Krypton.Workspace.xml",
+        "lib/netcoreapp3.1/Krypton.Workspace.dll",
+        "lib/netcoreapp3.1/Krypton.Workspace.xml"
+      ]
+    },
+    "KryptonPaletteSelectors/1.2.2": {
+      "sha512": "JbMRq7lEwsi48RKfCYdp6eQRWHJsu7h9KJ0xTlcXIRRCC3TFmYnRa2XYe3bCF5iHxGPsklH8D7TkdiEZ0P+vUw==",
+      "type": "package",
+      "path": "kryptonpaletteselectors/1.2.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "kryptonpaletteselectors.1.2.2.nupkg.sha512",
+        "kryptonpaletteselectors.nuspec",
+        "lib/UserControls.Krypton.PaletteSelectors.dll"
+      ]
+    },
+    "MaterialDesignColors/2.0.4": {
+      "sha512": "l8LfghYjT2mBVp28CAU8UN4GQ6T/euzgGiTwFKy1DPUG8c5rng/CVXXqM5Xof0XAm0MhXgV8yjGRjQ7KOjT/Iw==",
+      "type": "package",
+      "path": "materialdesigncolors/2.0.4",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "images/MaterialDesignColors.Icon.png",
+        "lib/net452/MaterialDesignColors.dll",
+        "lib/net452/MaterialDesignColors.pdb",
+        "lib/netcoreapp3.1/MaterialDesignColors.dll",
+        "lib/netcoreapp3.1/MaterialDesignColors.pdb",
+        "materialdesigncolors.2.0.4.nupkg.sha512",
+        "materialdesigncolors.nuspec"
+      ]
+    },
+    "MaterialDesignThemes/4.3.0": {
+      "sha512": "edXh0Hl2LukyEZN+REVFuN+gaaUFo6AfHSaBjuZ95k4Qz1TljcxnfCznMKkGaQoEsy5ryk85ZbeRY/tOzFmKxg==",
+      "type": "package",
+      "path": "materialdesignthemes/4.3.0",
+      "hasTools": true,
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "build/MaterialDesignThemes.targets",
+        "build/Resources/Roboto/Roboto-Black.ttf",
+        "build/Resources/Roboto/Roboto-BlackItalic.ttf",
+        "build/Resources/Roboto/Roboto-Bold.ttf",
+        "build/Resources/Roboto/Roboto-BoldItalic.ttf",
+        "build/Resources/Roboto/Roboto-Italic.ttf",
+        "build/Resources/Roboto/Roboto-Light.ttf",
+        "build/Resources/Roboto/Roboto-LightItalic.ttf",
+        "build/Resources/Roboto/Roboto-Medium.ttf",
+        "build/Resources/Roboto/Roboto-MediumItalic.ttf",
+        "build/Resources/Roboto/Roboto-Regular.ttf",
+        "build/Resources/Roboto/Roboto-Thin.ttf",
+        "build/Resources/Roboto/Roboto-ThinItalic.ttf",
+        "build/Resources/Roboto/RobotoCondensed-Bold.ttf",
+        "build/Resources/Roboto/RobotoCondensed-BoldItalic.ttf",
+        "build/Resources/Roboto/RobotoCondensed-Italic.ttf",
+        "build/Resources/Roboto/RobotoCondensed-Light.ttf",
+        "build/Resources/Roboto/RobotoCondensed-LightItalic.ttf",
+        "build/Resources/Roboto/RobotoCondensed-Regular.ttf",
+        "images/MaterialDesignThemes.Icon.png",
+        "lib/net452/MaterialDesignThemes.Wpf.dll",
+        "lib/net452/MaterialDesignThemes.Wpf.pdb",
+        "lib/net452/MaterialDesignThemes.Wpf.xml",
+        "lib/netcoreapp3.1/MaterialDesignThemes.Wpf.dll",
+        "lib/netcoreapp3.1/MaterialDesignThemes.Wpf.pdb",
+        "lib/netcoreapp3.1/MaterialDesignThemes.Wpf.xml",
+        "materialdesignthemes.4.3.0.nupkg.sha512",
+        "materialdesignthemes.nuspec",
+        "tools/VisualStudioToolsManifest.xml"
+      ]
+    }
+  },
+  "projectFileDependencyGroups": {
+    "net6.0-windows7.0": [
+      "Krypton.Docking >= 60.22.2.32",
+      "Krypton.Navigator >= 60.22.2.32",
+      "Krypton.Ribbon >= 60.22.2.32",
+      "Krypton.Toolkit >= 60.22.2.32",
+      "Krypton.Workspace >= 60.22.2.32",
+      "KryptonPaletteSelectors >= 1.2.2",
+      "MaterialDesignColors >= 2.0.4",
+      "MaterialDesignThemes >= 4.3.0"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\acer\\.nuget\\packages\\": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "D:\\Cave\\Semester4\\Folder-Crawler\\src\\Folder-Crawler\\Folder-Crawler\\Folder-Crawler.csproj",
+      "projectName": "Folder-Crawler",
+      "projectPath": "D:\\Cave\\Semester4\\Folder-Crawler\\src\\Folder-Crawler\\Folder-Crawler\\Folder-Crawler.csproj",
+      "packagesPath": "C:\\Users\\acer\\.nuget\\packages\\",
+      "outputPath": "D:\\Cave\\Semester4\\Folder-Crawler\\src\\Folder-Crawler\\Folder-Crawler\\obj\\",
+      "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "C:\\Users\\acer\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+      ],
+      "originalTargetFrameworks": [
+        "net6.0-windows7.0"
+      ],
+      "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "net6.0-windows7.0": {
+          "targetAlias": "net6.0-windows",
+          "projectReferences": {}
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      }
+    },
+    "frameworks": {
+      "net6.0-windows7.0": {
+        "targetAlias": "net6.0-windows",
+        "dependencies": {
+          "Krypton.Docking": {
+            "target": "Package",
+            "version": "[60.22.2.32, )"
+          },
+          "Krypton.Navigator": {
+            "target": "Package",
+            "version": "[60.22.2.32, )"
+          },
+          "Krypton.Ribbon": {
+            "target": "Package",
+            "version": "[60.22.2.32, )"
+          },
+          "Krypton.Toolkit": {
+            "target": "Package",
+            "version": "[60.22.2.32, )"
+          },
+          "Krypton.Workspace": {
+            "target": "Package",
+            "version": "[60.22.2.32, )"
+          },
+          "KryptonPaletteSelectors": {
+            "target": "Package",
+            "version": "[1.2.2, )"
+          },
+          "MaterialDesignColors": {
+            "target": "Package",
+            "version": "[2.0.4, )"
+          },
+          "MaterialDesignThemes": {
+            "target": "Package",
+            "version": "[4.3.0, )"
+          }
+        },
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "frameworkReferences": {
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          },
+          "Microsoft.WindowsDesktop.App.WindowsForms": {
+            "privateAssets": "none"
+          }
+        },
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.200\\RuntimeIdentifierGraph.json"
+      }
+    }
+  },
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'KryptonPaletteSelectors 1.2.2' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework 'net6.0-windows7.0'. This package may not be fully compatible with your project.",
+      "libraryId": "KryptonPaletteSelectors",
+      "targetGraphs": [
+        "net6.0-windows7.0"
+      ]
+    }
+  ]
+}
