@@ -1,4 +1,5 @@
 using Krypton.Toolkit;
+using Folder_Crawler_Algo;
 
 namespace Folder_Crawler
 {
@@ -36,6 +37,8 @@ namespace Folder_Crawler
             int nWidthEllipse,
             int nHeightEllipse
             );
+
+
 
         public struct MARGINS
         {
@@ -103,6 +106,12 @@ namespace Folder_Crawler
         private void PanelMove_MouseUp(object sender, MouseEventArgs e) { Drag = false; }
         // end of taken code
 
+        // Algorithm Purposes
+        string fileName;
+        string rootPath;
+        Boolean findAllOccurrence;
+        int algorithm; //0 for BFS, 1 for DFS
+
         public Form1()
         {
             InitializeComponent();
@@ -142,7 +151,7 @@ namespace Folder_Crawler
 
         private void kryptonPalette1_PalettePaint(object sender, PaletteLayoutEventArgs e)
         {
-
+            
         }
 
         private void kryptonButton1_Click(object sender, EventArgs e)
@@ -150,6 +159,7 @@ namespace Folder_Crawler
             FolderBrowserDialog FolderBrowserDialog1 = new FolderBrowserDialog();
             FolderBrowserDialog1.ShowDialog();
             FolderLabel.Text = FolderBrowserDialog1.SelectedPath;
+            rootPath = FolderBrowserDialog1.SelectedPath;
         }
 
         private void FolderLabel_Paint(object sender, PaintEventArgs e)
@@ -175,6 +185,55 @@ namespace Folder_Crawler
         private void kryptonButton4_Click(object sender, EventArgs e)
         {
 
+            // Check udah diisi apa belum gais
+
+            String[] dirPath = Algorithm.RunAlgorithm(fileName, rootPath, findAllOccurrence, algorithm);
+            string data = "";
+
+            foreach(string path in dirPath)
+            {
+                data += path + "\n";
+            }
+
+            kryptonLinkLabel1.Text = dirPath[0];
+            kryptonLabel4.Text = data;
+            kryptonLabel4.AutoSize = true;
+        }
+
+        private void BFS_CheckedChanged(object sender, EventArgs e)
+        {
+            if (BFS.Checked)
+            {
+                algorithm = 0;
+            }
+        }
+
+        private void kryptonLabel4_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void kryptonTextBox1_TextChanged(object sender, EventArgs e)
+        {
+            fileName = kryptonTextBox1.Text;
+        }
+
+        private void DFS_CheckedChanged(object sender, EventArgs e)
+        {
+            if (DFS.Checked)
+            {
+                algorithm = 1;
+            }
+        }
+
+        private void SemuaFileCheck_CheckedChanged(object sender, EventArgs e)
+        {
+            findAllOccurrence = SemuaFileCheck.Checked;
+        }
+
+        private void kryptonLinkLabel1_LinkClicked(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("explorer.exe", Path.GetDirectoryName(kryptonLinkLabel1.Text));
         }
     }
 }

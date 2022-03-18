@@ -1,17 +1,17 @@
 {
   "version": 2,
-  "dgSpecHash": "SzwzvsBFbiT5JYU4uCYzXCkIvQv41NGln82IwevXeJixwc7Rzi+4CBucSBKf7dqfdR4KTkKgv2fIhE2H/eBx4A==",
+  "dgSpecHash": "d44T8+2mPhcdq33SitJaqKosCF72Okr5hunogl5FncP9AWNzqqo8abxEhnOmHwZjLYS6voQUuFmSFKC6gvWz2A==",
   "success": true,
-  "projectFilePath": "D:\\Cave\\Semester4\\Folder-Crawler\\src\\Folder-Crawler\\Folder-Crawler\\Folder-Crawler.csproj",
+  "projectFilePath": "C:\\Users\\rioau\\Documents\\ITB\\2Tingkat 2\\Sem2\\Tugas\\STIMA\\Folder-Crawler\\src\\Folder-Crawler\\Folder-Crawler\\Folder-Crawler.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\acer\\.nuget\\packages\\krypton.docking\\60.22.2.32\\krypton.docking.60.22.2.32.nupkg.sha512",
-    "C:\\Users\\acer\\.nuget\\packages\\krypton.navigator\\60.22.2.32\\krypton.navigator.60.22.2.32.nupkg.sha512",
-    "C:\\Users\\acer\\.nuget\\packages\\krypton.ribbon\\60.22.2.32\\krypton.ribbon.60.22.2.32.nupkg.sha512",
-    "C:\\Users\\acer\\.nuget\\packages\\krypton.toolkit\\60.22.2.32\\krypton.toolkit.60.22.2.32.nupkg.sha512",
-    "C:\\Users\\acer\\.nuget\\packages\\krypton.workspace\\60.22.2.32\\krypton.workspace.60.22.2.32.nupkg.sha512",
-    "C:\\Users\\acer\\.nuget\\packages\\kryptonpaletteselectors\\1.2.2\\kryptonpaletteselectors.1.2.2.nupkg.sha512",
-    "C:\\Users\\acer\\.nuget\\packages\\materialdesigncolors\\2.0.4\\materialdesigncolors.2.0.4.nupkg.sha512",
-    "C:\\Users\\acer\\.nuget\\packages\\materialdesignthemes\\4.3.0\\materialdesignthemes.4.3.0.nupkg.sha512"
+    "C:\\Users\\rioau\\.nuget\\packages\\krypton.docking\\60.22.2.32\\krypton.docking.60.22.2.32.nupkg.sha512",
+    "C:\\Users\\rioau\\.nuget\\packages\\krypton.navigator\\60.22.2.32\\krypton.navigator.60.22.2.32.nupkg.sha512",
+    "C:\\Users\\rioau\\.nuget\\packages\\krypton.ribbon\\60.22.2.32\\krypton.ribbon.60.22.2.32.nupkg.sha512",
+    "C:\\Users\\rioau\\.nuget\\packages\\krypton.toolkit\\60.22.2.32\\krypton.toolkit.60.22.2.32.nupkg.sha512",
+    "C:\\Users\\rioau\\.nuget\\packages\\krypton.workspace\\60.22.2.32\\krypton.workspace.60.22.2.32.nupkg.sha512",
+    "C:\\Users\\rioau\\.nuget\\packages\\kryptonpaletteselectors\\1.2.2\\kryptonpaletteselectors.1.2.2.nupkg.sha512",
+    "C:\\Users\\rioau\\.nuget\\packages\\materialdesigncolors\\2.0.4\\materialdesigncolors.2.0.4.nupkg.sha512",
+    "C:\\Users\\rioau\\.nuget\\packages\\materialdesignthemes\\4.3.0\\materialdesignthemes.4.3.0.nupkg.sha512"
   ],
   "logs": [
     {
