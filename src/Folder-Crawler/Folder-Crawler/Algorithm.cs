@@ -104,8 +104,7 @@ namespace Folder_Crawler_Algo
         }
         static void getAllDirsDFS(String rootPath, ref String[] allDirs, ref parentAndChild[] parentAndChildren)
         {
-            allDirs = new string[] { rootPath };
-            List<string> tempDirs = allDirs.ToList();
+            List<string> tempDirs = Directory.GetDirectories(rootPath).ToList();
            
 
             int i = 0;
