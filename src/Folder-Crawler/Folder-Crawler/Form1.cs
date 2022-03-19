@@ -181,6 +181,7 @@ namespace Folder_Crawler
             string fileName = kryptonTextBox1.Text;
             string rootPath = FolderLabel.Text;
             Boolean findAllOccurrence = SemuaFileCheck.Checked;
+            parentAndChild[] parentAndChildren = new parentAndChild[] { }; //perlu dibenerin
             int algorithm = -1; //0 for BFS, 1 for DFS
             if (BFS.Checked) {
                 algorithm = 0;
@@ -192,34 +193,59 @@ namespace Folder_Crawler
             if (fileName == "" || rootPath == "" || algorithm == -1)
             {
                 WarningLabel.Visible = true;
-            } else
+            } 
+            else
             {
                 WarningLabel.Visible = false;
                 PohonLabel.Visible = true;
                 BatalButton.Visible = true;
-                // Run algorithm
-                String[] dirPath = Algorithm.RunAlgorithm(fileName, rootPath, findAllOccurrence, algorithm);
+
+                String[] dirPath = new string[] { };
+                String[] targetPath = new string[] { };
+
+                //Run Algorithm
+                Algorithm.RunAlgorithm(fileName, rootPath, findAllOccurrence, algorithm, ref targetPath, ref dirPath, ref parentAndChildren);
 
                 // Ketemu
-                if (dirPath.Length > 0)
+                if (targetPath.Length > 0)
                 {
                     DitemukanLabel.Text = "Ketemu!";
                     DitemukanLabel.Visible = true;
-                    string data = "";
-
-                    foreach (string path in dirPath)
-                    {
-                        data += path + "\n";
-                    }
-
-                    HasilLabel.Text = dirPath[0];
-                    kryptonLabel4.Text = data;
-                    kryptonLabel4.AutoSize = true;
-                } else // Ga ketemu
+                    HasilLabel.Text = targetPath[0];
+                }
+                else // Ga ketemu
                 {
                     DitemukanLabel.Text = "File tidak ditemukan :(";
                     DitemukanLabel.Visible = true;
                 }
+
+                // Debugging dirPath
+                string data1 = "";
+
+                foreach (string path in dirPath)
+                {
+                    data1 += path + "\n";
+                }
+
+                // Debugging parent and child node
+                string data2 = "";
+
+                foreach (parentAndChild parentAndChild in parentAndChildren)
+                {
+                    data2 += parentAndChild.getParentPath() + " <-> " + parentAndChild.getParentName() + "\n";
+                    
+                    for(int i = 0; i < parentAndChild.getChildPath().Length; i++)
+                    {
+                        data2 +=    "        " + 
+                                    parentAndChild.getChildPath()[i] +
+                                    " <-> " + 
+                                    parentAndChild.getChildName()[i] +  "\n";
+                    }
+                }
+
+
+                kryptonLabel4.Text = data1;
+                kryptonLabel4.AutoSize = true;
 
                 // Time Spent UBAH INI
                 TimeLabel.Text = "0" + "s";
