@@ -204,7 +204,8 @@ namespace Folder_Crawler
             string fileName = kryptonTextBox1.Text;
             string rootPath = FolderLabel.Text;
             Boolean findAllOccurrence = SemuaFileCheck.Checked;
-            parentAndChild[] parentAndChildren = new parentAndChild[] { }; //perlu dibenerin
+            treeNode[] parentAndChildren = new treeNode[] { };
+            long totalTime = 0;
             int algorithm = -1; //0 for BFS, 1 for DFS
             if (BFS.Checked) {
                 algorithm = 0;
@@ -229,7 +230,7 @@ namespace Folder_Crawler
                 String[] targetPath = new string[] { };
 
                 //Run Algorithm
-                Algorithm.RunAlgorithm(fileName, rootPath, findAllOccurrence, algorithm, ref targetPath, ref dirPath, ref parentAndChildren);
+                Algorithm.RunAlgorithm(fileName, rootPath, findAllOccurrence, algorithm, ref targetPath, ref parentAndChildren, ref totalTime);
 
                 // Ketemu
                 if (targetPath.Length > 0)
@@ -244,14 +245,7 @@ namespace Folder_Crawler
                     DitemukanLabel.Visible = true;
                 }
 
-
-
-                // Debugging dirPath
                 string data1 = "";
-
-                kryptonLabel4.Text = data1;
-                kryptonLabel4.AutoSize = true;
-
                 foreach (string path in dirPath)
                 {
                     data1 += path + "\n";
@@ -260,7 +254,7 @@ namespace Folder_Crawler
                 // Debugging parent and child node
                 string data2 = "";
 
-                foreach (parentAndChild parentAndChild in parentAndChildren)
+                foreach (treeNode parentAndChild in parentAndChildren)
                 {
                     data2 += parentAndChild.getParentPath() + " <-> " + parentAndChild.getParentName() + "\n";
                     
@@ -273,6 +267,18 @@ namespace Folder_Crawler
                     }
                 }
 
+                // Debugging dirPath
+
+                testingConsole.Text = data2;
+                testingConsole.AutoSize = true;
+                testingConsole.Visible = false;
+
+
+                kryptonLabel6.Text = data2;
+                kryptonLabel6.AutoSize = true;
+                kryptonLabel6.Visible = false;
+                kryptonLabel6.BackColor = Color.Blue;
+
 
                 if (!(graphcounter == 0))
                 {
@@ -280,22 +286,26 @@ namespace Folder_Crawler
                     graph = new Microsoft.Msagl.Drawing.Graph("graph");
                 }
 
+                viewer.Visible = true;
                 viewer.Width = graphPanel.Width;
                 viewer.Height = graphPanel.Height;
-                foreach (parentAndChild parentAndChild in parentAndChildren)
+                foreach (treeNode parentAndChild in parentAndChildren)
                 {
-                    for (int i = 0; i < parentAndChild.getChildPath().Length; i++)
+                    if (parentAndChild.getCheck() == 0)
                     {
-                        wait(waitTime);
-                        
-                        graph.AddEdge(parentAndChild.getParentPath(), parentAndChild.getChildPath()[i]);
-                        graph.FindNode(parentAndChild.getParentPath()).LabelText = parentAndChild.getParentName();
-                        graph.FindNode(parentAndChild.getChildPath()[i]).LabelText = parentAndChild.getChildName()[i];
-                        
-                        viewer.Graph = graph;
-                        graphPanel.SuspendLayout();
-                        graphPanel.Controls.Add(viewer);
-                        graphPanel.ResumeLayout();
+                        for (int i = 0; i < parentAndChild.getChildPath().Length; i++)
+                        {
+                            wait(waitTime);
+
+                            graph.AddEdge(parentAndChild.getParentPath(), parentAndChild.getChildPath()[i]);
+                            graph.FindNode(parentAndChild.getParentPath()).LabelText = parentAndChild.getParentName();
+                            graph.FindNode(parentAndChild.getChildPath()[i]).LabelText = parentAndChild.getChildName()[i];
+
+                            viewer.Graph = graph;
+                            graphPanel.SuspendLayout();
+                            graphPanel.Controls.Add(viewer);
+                            graphPanel.ResumeLayout();
+                        }
                     }
                 }
 
@@ -316,7 +326,7 @@ namespace Folder_Crawler
 
 
                 // Time Spent UBAH INI
-                TimeLabel.Text = "0" + "s";
+                TimeLabel.Text = totalTime.ToString() + "ms";
                 TimeLabel.Visible = true;
                 TimeTitleLable.Visible = true;
             }
@@ -382,6 +392,11 @@ namespace Folder_Crawler
         private void trackBar1_Scroll(object sender, EventArgs e)
         {
             DelayTime.Text = trackBar1.Value.ToString() + " ms";
+        }
+
+        private void kryptonLabel4_Paint_1(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
