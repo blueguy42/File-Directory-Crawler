@@ -52,6 +52,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="AutomaticGraphLayout" Version="1.1.11" />
+    <PackageReference Include="AutomaticGraphLayout.Drawing" Version="1.1.11" />
+    <PackageReference Include="AutomaticGraphLayout.GraphViewerGDI" Version="1.1.11" />
+    <PackageReference Include="AutomaticGraphLayout.WpfGraphControl" Version="1.1.11" />
     <PackageReference Include="Krypton.Docking" Version="60.22.2.32" />
     <PackageReference Include="Krypton.Navigator" Version="60.22.2.32" />
     <PackageReference Include="Krypton.Ribbon" Version="60.22.2.32" />

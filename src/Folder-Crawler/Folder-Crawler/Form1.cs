@@ -106,6 +106,29 @@ namespace Folder_Crawler
         private void PanelMove_MouseUp(object sender, MouseEventArgs e) { Drag = false; }
         // end of taken code
 
+        //create a viewer object 
+        Microsoft.Msagl.GraphViewerGdi.GViewer viewer = new Microsoft.Msagl.GraphViewerGdi.GViewer();   
+        //create a graph object 
+        Microsoft.Msagl.Drawing.Graph graph = new Microsoft.Msagl.Drawing.Graph("graph");
+        int graphcounter = 0;
+
+        public void wait(int milliseconds)
+        {
+            var timer1 = new System.Windows.Forms.Timer();
+
+            timer1.Interval = milliseconds;
+            timer1.Enabled = true;
+            timer1.Start();
+
+            timer1.Tick += (s, e) => {
+                timer1.Enabled = false;
+                timer1.Stop();
+            };
+
+            while (timer1.Enabled) { Application.DoEvents(); }
+        }
+
+
         public Form1()
         {
             InitializeComponent();
@@ -188,6 +211,7 @@ namespace Folder_Crawler
             } else if (DFS.Checked) {
                 algorithm = 1;
             }
+            int waitTime = trackBar1.Value;
 
             // Cek apakah sudah terisi semua
             if (fileName == "" || rootPath == "" || algorithm == -1)
@@ -199,6 +223,7 @@ namespace Folder_Crawler
                 WarningLabel.Visible = false;
                 PohonLabel.Visible = true;
                 BatalButton.Visible = true;
+                graphPanel.Visible = true;
 
                 String[] dirPath = new string[] { };
                 String[] targetPath = new string[] { };
@@ -219,8 +244,13 @@ namespace Folder_Crawler
                     DitemukanLabel.Visible = true;
                 }
 
+
+
                 // Debugging dirPath
                 string data1 = "";
+
+                kryptonLabel4.Text = data1;
+                kryptonLabel4.AutoSize = true;
 
                 foreach (string path in dirPath)
                 {
@@ -244,8 +274,46 @@ namespace Folder_Crawler
                 }
 
 
-                kryptonLabel4.Text = data1;
-                kryptonLabel4.AutoSize = true;
+                if (!(graphcounter == 0))
+                {
+                    graph = null;
+                    graph = new Microsoft.Msagl.Drawing.Graph("graph");
+                }
+
+                viewer.Width = graphPanel.Width;
+                viewer.Height = graphPanel.Height;
+                foreach (parentAndChild parentAndChild in parentAndChildren)
+                {
+                    for (int i = 0; i < parentAndChild.getChildPath().Length; i++)
+                    {
+                        wait(waitTime);
+                        
+                        graph.AddEdge(parentAndChild.getParentPath(), parentAndChild.getChildPath()[i]);
+                        graph.FindNode(parentAndChild.getParentPath()).LabelText = parentAndChild.getParentName();
+                        graph.FindNode(parentAndChild.getChildPath()[i]).LabelText = parentAndChild.getChildName()[i];
+                        
+                        viewer.Graph = graph;
+                        graphPanel.SuspendLayout();
+                        graphPanel.Controls.Add(viewer);
+                        graphPanel.ResumeLayout();
+                    }
+                }
+
+                /* graph.AddEdge("A", "B");
+                graph.AddEdge("B", "C");
+                graph.AddEdge("A", "C").Attr.Color = Microsoft.Msagl.Drawing.Color.Green;
+                graph.FindNode("A").Attr.FillColor = Microsoft.Msagl.Drawing.Color.Magenta;
+                graph.FindNode("B").Attr.FillColor = Microsoft.Msagl.Drawing.Color.MistyRose;
+                Microsoft.Msagl.Drawing.Node c = graph.FindNode("C");
+                c.Attr.FillColor = Microsoft.Msagl.Drawing.Color.PaleGreen;
+                c.Attr.Shape = Microsoft.Msagl.Drawing.Shape.Diamond; */
+                //bind the graph to the viewer 
+                
+                //associate the viewer with the form 
+                
+                graphcounter++;
+
+
 
                 // Time Spent UBAH INI
                 TimeLabel.Text = "0" + "s";
@@ -289,6 +357,31 @@ namespace Folder_Crawler
         {
             WelcomeLabel.Text = "  Isi masukan terlebih dahulu, kemudian tekan tombol 'Mulai Pencarian!'\n untuk mulai menanam pohon DFS-BFS pertamamu! (Maksudnya,\n mulai mencari file hehe)";
             kryptonLabel4.AutoSize = true;
+        }
+
+        private void PohonLabel_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void graphPanel_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void BatalButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void kryptonLabel1_Paint_1(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void trackBar1_Scroll(object sender, EventArgs e)
+        {
+            DelayTime.Text = trackBar1.Value.ToString() + " ms";
         }
     }
 }

@@ -55,6 +55,8 @@ namespace Folder_Crawler_Algo
         }
     }
 
+
+
     class Algorithm
     {
         public static void RunAlgorithm(string fileName, string rootPath, Boolean findAllOccurrence, int algorithm, ref string[] targetPath, ref string[] dirPath, ref parentAndChild[] parentAndChildren)
