@@ -99,7 +99,7 @@ namespace Folder_Crawler_Algo
             }
               
             //Check files
-            //fileChecker(fileName, allDirPath, ref targetPath, findAllOccurrence);
+            fileChecker(fileName, allDirPath, ref targetPath, findAllOccurrence);
            
             // Convert to treeNodes
             convertDirsToNodes(allDirPath, allRootsPath, ref treeNodes, findAllOccurrence, fileName);
@@ -173,6 +173,8 @@ namespace Folder_Crawler_Algo
             //Add starting root
             tempDirs.Insert(0, rootPath);
             tempRoots.Insert(0, rootPath);
+            isDir.Insert(0, true);
+
             
             //Removing safety net
             tempDirs.RemoveAt(tempDirs.Count - 1);
@@ -238,7 +240,9 @@ namespace Folder_Crawler_Algo
         {
             //Instantiate tree nodes from dirs in root path
             List<treeNode> newTreeNodes = new List<treeNode>();
-            newTreeNodes.Add(new treeNode(tempRoots[0], Directory.GetDirectories(tempRoots[0]).ToArray(), 0, false));
+            string[] allNewRoots = Directory.GetDirectories(tempRoots[0]).ToArray();
+            allNewRoots = allNewRoots.Concat(Directory.GetFiles(tempRoots[0])).ToArray();
+            newTreeNodes.Add(new treeNode(tempRoots[0], allNewRoots, 0, false));
             newTreeNodes.Add(new treeNode("END", new string[] { "END" }, -1, false));  //for safety measure, incase of list inserting error
 
             //Check files in root path
@@ -253,7 +257,9 @@ namespace Folder_Crawler_Algo
 
                 if (currRootPath != root)
                 {
-                    newTreeNodes.Insert(newTreeNodes.Count - 1, new treeNode(root, Directory.GetDirectories(root).ToArray(), 0, false));
+                    allNewRoots = Directory.GetDirectories(root).ToArray();
+                    allNewRoots = allNewRoots.Concat(Directory.GetFiles(root)).ToArray();
+                    newTreeNodes.Insert(newTreeNodes.Count - 1, new treeNode(root, allNewRoots, 0, false));
                     currRootPath = tempRoots[i];
 
                     /*
@@ -274,7 +280,16 @@ namespace Folder_Crawler_Algo
                     }
                     */
                 }
+
                 newTreeNodes.Insert(newTreeNodes.Count - 1, new treeNode(root, new string[] { dir }, 1, false));
+                if (Path.GetFileName(dir) == fileName) 
+                {
+                    newTreeNodes.Insert(newTreeNodes.Count - 1, new treeNode(root, new string[] { dir }, 2, true));
+                    if (!findAllOccurrenc)
+                    {
+                        break;
+                    }
+                }
 
 
                 i++;
@@ -288,8 +303,13 @@ namespace Folder_Crawler_Algo
         static void fileChecker(string fileName, string[] allDirPath, ref string[] targetPath, bool findAllOccurrence)
         {
             // Check files
+            int i = 0;
             foreach (var dir in allDirPath)
             {
+                if (!File.GetAttributes(dir).HasFlag(FileAttributes.Directory))
+                {
+                    continue;
+                }
                 if (CheckFileInsideFolder(fileName, dir))
                 {
                     //File exisst in root 
@@ -300,6 +320,7 @@ namespace Folder_Crawler_Algo
                         break; // To Stop after target found
                     }
                 }
+                i++;
             }
         }
 

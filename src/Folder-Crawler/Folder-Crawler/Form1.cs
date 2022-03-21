@@ -299,23 +299,66 @@ namespace Folder_Crawler
                     viewer.Visible = true;
                     viewer.Width = graphPanel.Width;
                     viewer.Height = graphPanel.Height;
+
+                    bool isChanged = true;
                     foreach (treeNode parentAndChild in parentAndChildren)
                     {
                         for (int i = 0; i < parentAndChild.getChildPath().Length; i++)
-                        {
-                            wait(waitTime);
+                        {                            
+                            if (isChanged)
+                            {
+                                wait(waitTime);
+                            }
+                            isChanged = false;
 
                             if (parentAndChild.getCheck() == 0)
                             {
-                                graph.AddEdge(parentAndChild.getParentPath(), parentAndChild.getChildPath()[i]).Attr.Color = Microsoft.Msagl.Drawing.Color.Black;
+                                int j = 0;
+                                //Menambahkan node baru
+                                if (graph.FindNode(parentAndChild.getParentPath()) == null)
+                                {
+                                    graph.AddEdge(parentAndChild.getParentPath(), parentAndChild.getChildPath()[i]).Attr.Color = Microsoft.Msagl.Drawing.Color.Black;
+                                    isChanged = true;
+                                }
+                                else
+                                {
+                                    //Menambahkan edge baru ke node yang sudah ada
+                                    bool foundSameEdge = false;
+                                    foreach(var edge in graph.FindNode(parentAndChild.getParentPath()).Edges)
+                                    {
+                                        if (edge.Target.ToString() == parentAndChild.getChildPath()[i])
+                                        {
+                                            foundSameEdge = true;
+                                        };
+                                    }
+
+                                    if (!foundSameEdge)
+                                    {
+                                        graph.AddEdge(parentAndChild.getParentPath(), parentAndChild.getChildPath()[i]).Attr.Color = Microsoft.Msagl.Drawing.Color.Black;
+                                        isChanged = true;
+                                    }
+                                }
                             }
-                            else if (parentAndChild.getCheck() == 1)
+                            else if (parentAndChild.getCheck() == 1 || parentAndChild.getCheck() == 2)
                             {
-                                graph.AddEdge(parentAndChild.getParentPath(), parentAndChild.getChildPath()[i]).Attr.Color = Microsoft.Msagl.Drawing.Color.Red;
-                            }
-                            else if (parentAndChild.getCheck() == 2)
-                            {
-                                graph.AddEdge(parentAndChild.getParentPath(), parentAndChild.getChildPath()[i]).Attr.Color = Microsoft.Msagl.Drawing.Color.Green;
+                                //Mewarnai edge dengan mencari edge yang sama
+                                bool foundSameEdge = false;
+                                foreach (var edge in graph.FindNode(parentAndChild.getParentPath()).Edges)
+                                {
+                                    if (edge.Target.ToString() == parentAndChild.getChildPath()[i])
+                                    {
+                                        if(parentAndChild.getCheck() == 1)
+                                        {
+                                            edge.Attr.Color = Microsoft.Msagl.Drawing.Color.Red;
+                                            isChanged = true;   
+                                        }
+                                        else if(parentAndChild.getCheck() == 2)
+                                        {
+                                            edge.Attr.Color = Microsoft.Msagl.Drawing.Color.Green;
+                                            isChanged = true;
+                                        }
+                                    };
+                                }                               
                             }
                             graph.FindNode(parentAndChild.getParentPath()).LabelText = parentAndChild.getParentName();
                             graph.FindNode(parentAndChild.getParentPath()).Attr.Shape = Microsoft.Msagl.Drawing.Shape.Plaintext;
