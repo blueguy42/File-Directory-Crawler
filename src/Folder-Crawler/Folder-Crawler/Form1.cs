@@ -198,137 +198,159 @@ namespace Folder_Crawler
 
         }
 
+        Boolean algoRunning = false;
         private void kryptonButton4_Click(object sender, EventArgs e)
         {
-            // Inisialisasi variabel
-            string fileName = kryptonTextBox1.Text;
-            string rootPath = FolderLabel.Text;
-            Boolean findAllOccurrence = SemuaFileCheck.Checked;
-            treeNode[] parentAndChildren = new treeNode[] { };
-            long totalTime = 0;
-            int algorithm = -1; //0 for BFS, 1 for DFS
-            if (BFS.Checked) {
-                algorithm = 0;
-            } else if (DFS.Checked) {
-                algorithm = 1;
-            }
-            int waitTime = trackBar1.Value;
-
-            // Cek apakah sudah terisi semua
-            if (fileName == "" || rootPath == "" || algorithm == -1)
-            {
-                WarningLabel.Visible = true;
-            } 
-            else
-            {
-                WarningLabel.Visible = false;
-                PohonLabel.Visible = true;
-                BatalButton.Visible = true;
-                graphPanel.Visible = true;
-
-                String[] dirPath = new string[] { };
-                String[] targetPath = new string[] { };
-
-                //Run Algorithm
-                Algorithm.RunAlgorithm(fileName, rootPath, findAllOccurrence, algorithm, ref targetPath, ref parentAndChildren, ref totalTime);
-
-                // Ketemu
-                if (targetPath.Length > 0)
-                {
-                    DitemukanLabel.Text = "Ketemu!";
-                    DitemukanLabel.Visible = true;
-                    HasilLabel.Text = targetPath[0];
+            if (!algoRunning) {
+                // Inisialisasi variabel
+                string fileName = kryptonTextBox1.Text;
+                string rootPath = FolderLabel.Text;
+                Boolean findAllOccurrence = SemuaFileCheck.Checked;
+                treeNode[] parentAndChildren = new treeNode[] { };
+                long totalTime = 0;
+                int algorithm = -1; //0 for BFS, 1 for DFS
+                if (BFS.Checked) {
+                    algorithm = 0;
+                } else if (DFS.Checked) {
+                    algorithm = 1;
                 }
-                else // Ga ketemu
+                int waitTime = trackBar1.Value;
+
+                // Cek apakah sudah terisi semua
+                if (fileName == "" || rootPath == "" || algorithm == -1)
                 {
-                    DitemukanLabel.Text = "File tidak ditemukan :(";
-                    DitemukanLabel.Visible = true;
+                    WarningLabel.Text = "! Silakan lengkapi masukan terlebih dahulu";
+                    WarningLabel.Visible = true;
                 }
-
-                string data1 = "";
-                foreach (string path in dirPath)
+                else
                 {
-                    data1 += path + "\n";
-                }
+                    algoRunning = true;
 
-                // Debugging parent and child node
-                string data2 = "";
+                    WarningLabel.Visible = false;
+                    PohonLabel.Visible = true;
+                    BatalButton.Visible = true;
+                    graphPanel.Visible = true;
 
-                foreach (treeNode parentAndChild in parentAndChildren)
-                {
-                    data2 += parentAndChild.getParentPath() + " <-> " + parentAndChild.getParentName() + "\n";
-                    
-                    for(int i = 0; i < parentAndChild.getChildPath().Length; i++)
+                    String[] dirPath = new string[] { };
+                    String[] targetPath = new string[] { };
+
+                    //Run Algorithm
+                    Algorithm.RunAlgorithm(fileName, rootPath, findAllOccurrence, algorithm, ref targetPath, ref parentAndChildren, ref totalTime);
+
+                    // Ketemu
+                    if (targetPath.Length > 0)
                     {
-                        data2 +=    "        " + 
-                                    parentAndChild.getChildPath()[i] +
-                                    " <-> " + 
-                                    parentAndChild.getChildName()[i] +  "\n";
+                        DitemukanLabel.Text = "Ketemu!";
+                        DitemukanLabel.Visible = true;
+                        HasilLabel.Text = targetPath[0];
                     }
-                }
+                    else // Ga ketemu
+                    {
+                        DitemukanLabel.Text = "File tidak ditemukan :(";
+                        DitemukanLabel.Visible = true;
+                    }
 
-                // Debugging dirPath
+                    string data1 = "";
+                    foreach (string path in dirPath)
+                    {
+                        data1 += path + "\n";
+                    }
 
-                testingConsole.Text = data2;
-                testingConsole.AutoSize = true;
-                testingConsole.Visible = false;
+                    // Debugging parent and child node
+                    string data2 = "";
+
+                    foreach (treeNode parentAndChild in parentAndChildren)
+                    {
+                        data2 += parentAndChild.getParentPath() + " <-> " + parentAndChild.getParentName() + "\n";
+
+                        for (int i = 0; i < parentAndChild.getChildPath().Length; i++)
+                        {
+                            data2 += "        " +
+                                        parentAndChild.getChildPath()[i] +
+                                        " <-> " +
+                                        parentAndChild.getChildName()[i] + "\n";
+                        }
+                    }
+
+                    // Debugging dirPath
+
+                    testingConsole.Text = data2;
+                    testingConsole.AutoSize = true;
+                    testingConsole.Visible = false;
 
 
-                kryptonLabel6.Text = data2;
-                kryptonLabel6.AutoSize = true;
-                kryptonLabel6.Visible = false;
-                kryptonLabel6.BackColor = Color.Blue;
+                    kryptonLabel6.Text = data2;
+                    kryptonLabel6.AutoSize = true;
+                    kryptonLabel6.Visible = false;
+                    kryptonLabel6.BackColor = Color.Blue;
 
 
-                if (!(graphcounter == 0))
-                {
-                    graph = null;
-                    graph = new Microsoft.Msagl.Drawing.Graph("graph");
-                }
+                    if (!(graphcounter == 0))
+                    {
+                        graph = null;
+                        graph = new Microsoft.Msagl.Drawing.Graph("graph");
+                    }
 
-                viewer.Visible = true;
-                viewer.Width = graphPanel.Width;
-                viewer.Height = graphPanel.Height;
-                foreach (treeNode parentAndChild in parentAndChildren)
-                {
-                    if (parentAndChild.getCheck() == 0)
+                    viewer.Visible = true;
+                    viewer.Width = graphPanel.Width;
+                    viewer.Height = graphPanel.Height;
+                    foreach (treeNode parentAndChild in parentAndChildren)
                     {
                         for (int i = 0; i < parentAndChild.getChildPath().Length; i++)
                         {
                             wait(waitTime);
 
-                            graph.AddEdge(parentAndChild.getParentPath(), parentAndChild.getChildPath()[i]);
+                            if (parentAndChild.getCheck() == 0)
+                            {
+                                graph.AddEdge(parentAndChild.getParentPath(), parentAndChild.getChildPath()[i]).Attr.Color = Microsoft.Msagl.Drawing.Color.Black;
+                            }
+                            else if (parentAndChild.getCheck() == 1)
+                            {
+                                graph.AddEdge(parentAndChild.getParentPath(), parentAndChild.getChildPath()[i]).Attr.Color = Microsoft.Msagl.Drawing.Color.Red;
+                            }
+                            else if (parentAndChild.getCheck() == 2)
+                            {
+                                graph.AddEdge(parentAndChild.getParentPath(), parentAndChild.getChildPath()[i]).Attr.Color = Microsoft.Msagl.Drawing.Color.Green;
+                            }
                             graph.FindNode(parentAndChild.getParentPath()).LabelText = parentAndChild.getParentName();
+                            graph.FindNode(parentAndChild.getParentPath()).Attr.Shape = Microsoft.Msagl.Drawing.Shape.Plaintext;
                             graph.FindNode(parentAndChild.getChildPath()[i]).LabelText = parentAndChild.getChildName()[i];
+                            graph.FindNode(parentAndChild.getChildPath()[i]).Attr.Shape = Microsoft.Msagl.Drawing.Shape.Plaintext;
 
                             viewer.Graph = graph;
                             graphPanel.SuspendLayout();
                             graphPanel.Controls.Add(viewer);
                             graphPanel.ResumeLayout();
                         }
+
                     }
+
+                    /* graph.AddEdge("A", "B");
+                    graph.AddEdge("B", "C");
+                    graph.AddEdge("A", "C").Attr.Color = Microsoft.Msagl.Drawing.Color.Green;
+                    graph.FindNode("A").Attr.FillColor = Microsoft.Msagl.Drawing.Color.Magenta;
+                    graph.FindNode("B").Attr.FillColor = Microsoft.Msagl.Drawing.Color.MistyRose;
+                    Microsoft.Msagl.Drawing.Node c = graph.FindNode("C");
+                    c.Attr.FillColor = Microsoft.Msagl.Drawing.Color.PaleGreen;
+                    c.Attr.Shape = Microsoft.Msagl.Drawing.Shape.Diamond; */
+                    //bind the graph to the viewer 
+
+                    //associate the viewer with the form 
+
+                    graphcounter++;
+
+
+
+                    // Time Spent UBAH INI
+                    TimeLabel.Text = totalTime.ToString() + "ms";
+                    TimeLabel.Visible = true;
+                    TimeTitleLable.Visible = true;
+
+                    algoRunning = false;
                 }
-
-                /* graph.AddEdge("A", "B");
-                graph.AddEdge("B", "C");
-                graph.AddEdge("A", "C").Attr.Color = Microsoft.Msagl.Drawing.Color.Green;
-                graph.FindNode("A").Attr.FillColor = Microsoft.Msagl.Drawing.Color.Magenta;
-                graph.FindNode("B").Attr.FillColor = Microsoft.Msagl.Drawing.Color.MistyRose;
-                Microsoft.Msagl.Drawing.Node c = graph.FindNode("C");
-                c.Attr.FillColor = Microsoft.Msagl.Drawing.Color.PaleGreen;
-                c.Attr.Shape = Microsoft.Msagl.Drawing.Shape.Diamond; */
-                //bind the graph to the viewer 
-                
-                //associate the viewer with the form 
-                
-                graphcounter++;
-
-
-
-                // Time Spent UBAH INI
-                TimeLabel.Text = totalTime.ToString() + "ms";
-                TimeLabel.Visible = true;
-                TimeTitleLable.Visible = true;
+            } else {
+                WarningLabel.Text = "! Tunggu hingga penggambaran tree selesai";
+                WarningLabel.Visible = true;
             }
         }
 
