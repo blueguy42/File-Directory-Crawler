@@ -250,6 +250,11 @@ namespace Folder_Crawler
                         DitemukanLabel.Visible = true;
                     }
 
+                    // Time Spent
+                    TimeLabel.Text = totalTime.ToString() + "ms";
+                    TimeLabel.Visible = true;
+                    TimeTitleLable.Visible = true;
+
                     string data1 = "";
                     foreach (string path in dirPath)
                     {
@@ -322,29 +327,9 @@ namespace Folder_Crawler
                             graphPanel.Controls.Add(viewer);
                             graphPanel.ResumeLayout();
                         }
-
                     }
 
-                    /* graph.AddEdge("A", "B");
-                    graph.AddEdge("B", "C");
-                    graph.AddEdge("A", "C").Attr.Color = Microsoft.Msagl.Drawing.Color.Green;
-                    graph.FindNode("A").Attr.FillColor = Microsoft.Msagl.Drawing.Color.Magenta;
-                    graph.FindNode("B").Attr.FillColor = Microsoft.Msagl.Drawing.Color.MistyRose;
-                    Microsoft.Msagl.Drawing.Node c = graph.FindNode("C");
-                    c.Attr.FillColor = Microsoft.Msagl.Drawing.Color.PaleGreen;
-                    c.Attr.Shape = Microsoft.Msagl.Drawing.Shape.Diamond; */
-                    //bind the graph to the viewer 
-
-                    //associate the viewer with the form 
-
                     graphcounter++;
-
-
-
-                    // Time Spent UBAH INI
-                    TimeLabel.Text = totalTime.ToString() + "ms";
-                    TimeLabel.Visible = true;
-                    TimeTitleLable.Visible = true;
 
                     algoRunning = false;
                 }
