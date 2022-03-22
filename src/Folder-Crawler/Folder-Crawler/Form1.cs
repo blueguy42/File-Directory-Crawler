@@ -225,7 +225,7 @@ namespace Folder_Crawler
                 int waitTime = trackBar1.Value;
 
                 // Cek apakah sudah terisi semua
-                if (fileName == "" || rootPath == "" || algorithm == -1)
+                if (fileName == "" || rootPath == "" || rootPath == "Belum ada folder yang dipilih" || algorithm == -1)
                 {
                     WarningLabel.Text = "! Silakan lengkapi masukan terlebih dahulu";
                     WarningLabel.Visible = true;
@@ -234,6 +234,7 @@ namespace Folder_Crawler
                 {
                     algoRunning = true;
 
+                    WelcomeLabel.Visible = false;
                     WarningLabel.Visible = false;
                     PohonLabel.Visible = true;
                     BatalButton.Visible = true;
@@ -447,8 +448,7 @@ namespace Folder_Crawler
 
         private void WelcomeLabel_Paint(object sender, PaintEventArgs e)
         {
-            WelcomeLabel.Text = "  Isi masukan terlebih dahulu, kemudian tekan tombol 'Mulai Pencarian!'\n untuk mulai menanam pohon DFS-BFS pertamamu! (Maksudnya,\n mulai mencari file hehe)";
-            kryptonLabel4.AutoSize = true;
+
         }
 
         private void PohonLabel_Paint(object sender, PaintEventArgs e)

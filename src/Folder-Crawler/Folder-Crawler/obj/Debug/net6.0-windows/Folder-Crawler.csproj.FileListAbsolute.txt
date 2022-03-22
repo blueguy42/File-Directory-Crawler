@@ -83,3 +83,7 @@ D:\GitHub\Folder-Crawler\src\Folder-Crawler\Folder-Crawler\bin\Debug\net6.0-wind
 D:\GitHub\Folder-Crawler\src\Folder-Crawler\Folder-Crawler\bin\Debug\net6.0-windows\AutomaticGraphLayout.Drawing.dll
 D:\GitHub\Folder-Crawler\src\Folder-Crawler\Folder-Crawler\bin\Debug\net6.0-windows\Microsoft.Msagl.GraphViewerGdi.dll
 D:\GitHub\Folder-Crawler\src\Folder-Crawler\Folder-Crawler\bin\Debug\net6.0-windows\Microsoft.Msagl.WpfGraphControl.dll
+D:\Cave\Semester4\Folder-Crawler\src\Folder-Crawler\Folder-Crawler\bin\Debug\net6.0-windows\AutomaticGraphLayout.dll
+D:\Cave\Semester4\Folder-Crawler\src\Folder-Crawler\Folder-Crawler\bin\Debug\net6.0-windows\AutomaticGraphLayout.Drawing.dll
+D:\Cave\Semester4\Folder-Crawler\src\Folder-Crawler\Folder-Crawler\bin\Debug\net6.0-windows\Microsoft.Msagl.GraphViewerGdi.dll
+D:\Cave\Semester4\Folder-Crawler\src\Folder-Crawler\Folder-Crawler\bin\Debug\net6.0-windows\Microsoft.Msagl.WpfGraphControl.dll
