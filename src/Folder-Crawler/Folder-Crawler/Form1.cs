@@ -128,6 +128,14 @@ namespace Folder_Crawler
             while (timer1.Enabled) { Application.DoEvents(); }
         }
 
+        // method to build graph
+        public void updateGraph(Microsoft.Msagl.GraphViewerGdi.GViewer viewer, Microsoft.Msagl.Drawing.Graph graph, Krypton.Toolkit.KryptonPanel graphPanel)
+        {
+            viewer.Graph = graph;
+            graphPanel.SuspendLayout();
+            graphPanel.Controls.Add(viewer);
+            graphPanel.ResumeLayout();
+        }
 
         public Form1()
         {
@@ -300,12 +308,24 @@ namespace Folder_Crawler
                     viewer.Width = graphPanel.Width;
                     viewer.Height = graphPanel.Height;
 
+                    // add rootPath node
+                    graph.AddNode(rootPath);
+                    graph.FindNode(rootPath).Attr.Shape = Microsoft.Msagl.Drawing.Shape.Plaintext;
+                    graph.FindNode(rootPath).LabelText = Path.GetFileName(rootPath);
+                    graph.FindNode(rootPath).Label.FontColor = Microsoft.Msagl.Drawing.Color.Black;
+                    updateGraph(viewer, graph, graphPanel);
+                    wait(waitTime);
+                    graph.FindNode(rootPath).Label.FontColor = Microsoft.Msagl.Drawing.Color.Red;
+                    updateGraph(viewer, graph, graphPanel);
+                    wait(waitTime);
+
                     bool isChanged = true;
                     foreach (treeNode parentAndChild in parentAndChildren)
                     {
+                        bool firstChild = true;
                         for (int i = 0; i < parentAndChild.getChildPath().Length; i++)
-                        {                            
-                            if (isChanged)
+                        {
+                            if (isChanged && firstChild)
                             {
                                 wait(waitTime);
                             }
@@ -313,18 +333,21 @@ namespace Folder_Crawler
 
                             if (parentAndChild.getCheck() == 0)
                             {
+                                firstChild = false;
                                 int j = 0;
                                 //Menambahkan node baru
                                 if (graph.FindNode(parentAndChild.getParentPath()) == null)
                                 {
                                     graph.AddEdge(parentAndChild.getParentPath(), parentAndChild.getChildPath()[i]).Attr.Color = Microsoft.Msagl.Drawing.Color.Black;
+                                    graph.FindNode(parentAndChild.getParentPath()).Label.FontColor = Microsoft.Msagl.Drawing.Color.Black;
+                                    graph.FindNode(parentAndChild.getChildPath()[i]).Label.FontColor = Microsoft.Msagl.Drawing.Color.Black;
                                     isChanged = true;
                                 }
                                 else
                                 {
                                     //Menambahkan edge baru ke node yang sudah ada
                                     bool foundSameEdge = false;
-                                    foreach(var edge in graph.FindNode(parentAndChild.getParentPath()).Edges)
+                                    foreach (var edge in graph.FindNode(parentAndChild.getParentPath()).Edges)
                                     {
                                         if (edge.Target.ToString() == parentAndChild.getChildPath()[i])
                                         {
@@ -335,6 +358,7 @@ namespace Folder_Crawler
                                     if (!foundSameEdge)
                                     {
                                         graph.AddEdge(parentAndChild.getParentPath(), parentAndChild.getChildPath()[i]).Attr.Color = Microsoft.Msagl.Drawing.Color.Black;
+                                        graph.FindNode(parentAndChild.getChildPath()[i]).Label.FontColor = Microsoft.Msagl.Drawing.Color.Black;
                                         isChanged = true;
                                     }
                                 }
@@ -342,36 +366,44 @@ namespace Folder_Crawler
                             else if (parentAndChild.getCheck() == 1 || parentAndChild.getCheck() == 2)
                             {
                                 //Mewarnai edge dengan mencari edge yang sama
-                                bool foundSameEdge = false;
                                 foreach (var edge in graph.FindNode(parentAndChild.getParentPath()).Edges)
                                 {
                                     if (edge.Target.ToString() == parentAndChild.getChildPath()[i])
                                     {
-                                        if(parentAndChild.getCheck() == 1)
+                                        if (parentAndChild.getCheck() == 1)
                                         {
                                             edge.Attr.Color = Microsoft.Msagl.Drawing.Color.Red;
-                                            isChanged = true;   
+                                            graph.FindNode(parentAndChild.getChildPath()[i]).Label.FontColor = Microsoft.Msagl.Drawing.Color.Red;
+                                            isChanged = true;
                                         }
-                                        else if(parentAndChild.getCheck() == 2)
+                                        else if (parentAndChild.getCheck() == 2)
                                         {
-                                            edge.Attr.Color = Microsoft.Msagl.Drawing.Color.Green;
+                                            Microsoft.Msagl.Drawing.Edge currentEdge = edge;
+                                            Microsoft.Msagl.Drawing.Node currentNode = edge.TargetNode;
+                                            currentEdge.TargetNode.Label.FontColor = Microsoft.Msagl.Drawing.Color.DodgerBlue;
+                                            while (currentNode.Id != rootPath)
+                                            {
+                                                currentEdge.Attr.Color = Microsoft.Msagl.Drawing.Color.DodgerBlue;
+                                                currentEdge.SourceNode.Label.FontColor = Microsoft.Msagl.Drawing.Color.DodgerBlue;
+                                                currentNode = currentEdge.SourceNode;
+                                                foreach (Microsoft.Msagl.Drawing.Edge inedges in currentNode.InEdges)
+                                                {
+                                                    currentEdge = inedges;
+                                                }
+                                            }
+
                                             isChanged = true;
                                         }
                                     };
-                                }                               
+                                }
                             }
                             graph.FindNode(parentAndChild.getParentPath()).LabelText = parentAndChild.getParentName();
                             graph.FindNode(parentAndChild.getParentPath()).Attr.Shape = Microsoft.Msagl.Drawing.Shape.Plaintext;
                             graph.FindNode(parentAndChild.getChildPath()[i]).LabelText = parentAndChild.getChildName()[i];
                             graph.FindNode(parentAndChild.getChildPath()[i]).Attr.Shape = Microsoft.Msagl.Drawing.Shape.Plaintext;
-
-                            viewer.Graph = graph;
-                            graphPanel.SuspendLayout();
-                            graphPanel.Controls.Add(viewer);
-                            graphPanel.ResumeLayout();
+                            updateGraph(viewer, graph, graphPanel);
                         }
                     }
-
                     graphcounter++;
 
                     algoRunning = false;
