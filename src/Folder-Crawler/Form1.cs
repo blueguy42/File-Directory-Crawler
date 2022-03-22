@@ -1,5 +1,6 @@
-using Krypton.Toolkit;
 using Folder_Crawler_Algo;
+using Krypton.Toolkit;
+using TreeNodes;
 
 namespace Folder_Crawler
 {
@@ -37,9 +38,6 @@ namespace Folder_Crawler
             int nWidthEllipse,
             int nHeightEllipse
             );
-
-
-
         public struct MARGINS
         {
             public int leftWidth;
@@ -104,13 +102,13 @@ namespace Folder_Crawler
             }
         }
         private void PanelMove_MouseUp(object sender, MouseEventArgs e) { Drag = false; }
-        // end of taken code
+        // END OF TAKEN CODE
 
         //create a viewer object 
-        Microsoft.Msagl.GraphViewerGdi.GViewer viewer = new Microsoft.Msagl.GraphViewerGdi.GViewer();   
+        Microsoft.Msagl.GraphViewerGdi.GViewer viewer = new Microsoft.Msagl.GraphViewerGdi.GViewer();
         //create a graph object 
         Microsoft.Msagl.Drawing.Graph graph = new Microsoft.Msagl.Drawing.Graph("graph");
-        int graphcounter = 0;
+        int graphcounter = 0;   // check to renew graph if graph not new
 
         // add delay of milliseconds
         public void wait(int milliseconds)
@@ -121,14 +119,14 @@ namespace Folder_Crawler
             timer1.Enabled = true;
             timer1.Start();
 
-            timer1.Tick += (s, e) => {
+            timer1.Tick += (s, e) =>
+            {
                 timer1.Enabled = false;
                 timer1.Stop();
             };
 
             while (timer1.Enabled) { Application.DoEvents(); }
         }
-
         // method to build graph
         public void updateGraph(Microsoft.Msagl.GraphViewerGdi.GViewer viewer, Microsoft.Msagl.Drawing.Graph graph, Krypton.Toolkit.KryptonPanel graphPanel)
         {
@@ -138,28 +136,13 @@ namespace Folder_Crawler
             graphPanel.ResumeLayout();
         }
 
-        public Form1()
-        {
-            InitializeComponent();
-        }
+        // KOMPONEN GUI //
+        public Form1() { InitializeComponent(); }
+        private void Form1_Load(object sender, EventArgs e) { }
 
-        private void Form1_Load(object sender, EventArgs e)
-        {
+        private void kryptonPalette1_PalettePaint(object sender, PaletteLayoutEventArgs e) { }
 
-        }
-
-        private void BrowseButton_Click(object sender, EventArgs e)
-        {
-            OpenFileDialog openFileDialog1 = new OpenFileDialog();
-            openFileDialog1.ShowDialog();
-            FolderLabel.Text = openFileDialog1.FileName;
-        }
-
-        private void kryptonPalette1_PalettePaint(object sender, PaletteLayoutEventArgs e)
-        {
-            
-        }
-
+        // Jika tombol browse folder diklik
         private void kryptonButton1_Click(object sender, EventArgs e)
         {
             FolderBrowserDialog FolderBrowserDialog1 = new FolderBrowserDialog();
@@ -167,45 +150,38 @@ namespace Folder_Crawler
             FolderLabel.Text = FolderBrowserDialog1.SelectedPath;
         }
 
-        private void FolderLabel_Paint(object sender, PaintEventArgs e)
-        {
+        private void FolderLabel_Paint(object sender, PaintEventArgs e) { }
 
-        }
+        private void kryptonLabel1_Paint(object sender, PaintEventArgs e) { }
 
-        private void kryptonLabel1_Paint(object sender, PaintEventArgs e)
-        {
+        private void kryptonLabel2_Paint(object sender, PaintEventArgs e) { }
 
-        }
+        private void kryptonWrapLabel1_Click(object sender, EventArgs e) { }
 
-        private void kryptonLabel2_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void kryptonWrapLabel1_Click(object sender, EventArgs e)
-        {
-
-        }
-
+        // Semaphore agar algoritma dan penggambaran hanya dijalankan
+        // bila algoritma/penggambaran tree sebelumnya sudah selesai
         Boolean algoRunning = false;
+
+        // Jika tombol "Mulai Pencarian" diklik
         private void kryptonButton4_Click(object sender, EventArgs e)
         {
-            if (!algoRunning) {
-                // Inisialisasi variabel
+            // cek algoritma atau penggambaran tree sebelumnya sudah selesai
+            if (!algoRunning)
+            {
+                // Inisialisasi variabel sesuai masukan user
                 string fileName = kryptonTextBox1.Text;
                 string rootPath = FolderLabel.Text;
                 Boolean findAllOccurrence = SemuaFileCheck.Checked;
                 treeNode[] parentAndChildren = new treeNode[] { };
                 long totalTime = 0;
                 int algorithm = -1; //0 for BFS, 1 for DFS
-                if (BFS.Checked) {
-                    algorithm = 0;
-                } else if (DFS.Checked) {
-                    algorithm = 1;
-                }
                 int waitTime = trackBar1.Value;
 
-                // Cek apakah sudah terisi semua
+                // cek apakah algoritma yang dipakai BFS atau DFS
+                if (BFS.Checked) { algorithm = 0; }
+                else if (DFS.Checked) { algorithm = 1; }
+
+                // Cek apakah isian user sudah terisi semua
                 if (fileName == "" || rootPath == "" || rootPath == "Belum ada folder yang dipilih" || algorithm == -1)
                 {
                     WarningLabel.Text = "! Silakan lengkapi masukan terlebih dahulu";
@@ -213,8 +189,11 @@ namespace Folder_Crawler
                 }
                 else
                 {
+                    // Menyalakan semaphore agar klik tombol tidak
+                    // memulai algoritma/penggambaran tre yang baru
                     algoRunning = true;
 
+                    // Mengubah tampilan GUI saaat memulai algoritma
                     Status.Text = "Menggambar pohon...";
                     Status.Visible = true;
                     WelcomeLabel.Visible = false;
@@ -227,56 +206,35 @@ namespace Folder_Crawler
                     Hasils.Visible = true;
                     Hasils.Controls.Clear();
 
-
-                    String[] dirPath = new string[] { };
+                    // Inisialisasi array string kumpulan path untuk algoritma
                     String[] targetPath = new string[] { };
 
-                    //Run Algorithm
+                    // Jalankan algoritma DFS/BFS
                     Main.RunAlgorithm(fileName, rootPath, findAllOccurrence, algorithm, ref targetPath, ref parentAndChildren, ref totalTime);
 
-                    // Ketemu
+                    // Jika ditemukan subfolder/file
                     if (targetPath.Length > 0)
                     {
                         DitemukanLabel.Text = "Ketemu!";
                     }
-                    else // Ga ketemu
+                    else
                     {
                         DitemukanLabel.Text = "File tidak ditemukan :(";
                     }
 
-                    string data1 = "";
-                    foreach (string path in dirPath)
-                    {
-                        data1 += path + "\n";
-                    }
-
-                    // Debugging parent and child node
-                    string data2 = "";
-
-                    foreach (treeNode parentAndChild in parentAndChildren)
-                    {
-                        data2 += parentAndChild.getParentPath() + " <-> " + parentAndChild.getParentName() + "\n";
-
-                        for (int i = 0; i < parentAndChild.getChildPath().Length; i++)
-                        {
-                            data2 += "        " +
-                                        parentAndChild.getChildPath()[i] +
-                                        " <-> " +
-                                        parentAndChild.getChildName()[i] + "\n";
-                        }
-                    }
-
+                    // Dealokasi dan buat graf baru bila graf sudah ada sebelumnya
                     if (!(graphcounter == 0))
                     {
                         graph = null;
                         graph = new Microsoft.Msagl.Drawing.Graph("graph");
                     }
 
+                    // Munculkan graf
                     viewer.Visible = true;
                     viewer.Width = graphPanel.Width;
                     viewer.Height = graphPanel.Height;
 
-                    // add rootPath node
+                    // gambar graf untuk rootpath
                     graph.AddNode(rootPath);
                     graph.FindNode(rootPath).Attr.Shape = Microsoft.Msagl.Drawing.Shape.Plaintext;
                     graph.FindNode(rootPath).LabelText = Path.GetFileName(rootPath);
@@ -287,68 +245,59 @@ namespace Folder_Crawler
                     updateGraph(viewer, graph, graphPanel);
                     wait(waitTime);
 
+                    // Loop gambar graf untuk anak-anak rootpath
                     bool isChanged = true;
-                    foreach (treeNode parentAndChild in parentAndChildren)
-                    {
+                    foreach (treeNode parentAndChild in parentAndChildren) {
+                        // Boolean untuk menambah delay untuk penambahan childPath ke queue algoritma
                         bool firstChild = true;
-                        for (int i = 0; i < parentAndChild.getChildPath().Length; i++)
-                        {
-                            if (isChanged && firstChild)
-                            {
+                        for (int i = 0; i < parentAndChild.getChildPath().Length; i++) { // loop setiap child dari parent
+                            // Menambahkan delay bila pohon berubah
+                            if (isChanged && firstChild) {
                                 wait(waitTime);
                             }
                             isChanged = false;
 
+                            // Penambahan node child untuk antrian algoritma (warna hitam)
                             if (parentAndChild.getCheck() == 0)
                             {
                                 firstChild = false;
-                                int j = 0;
-                                //Menambahkan node baru
-                                if (graph.FindNode(parentAndChild.getParentPath()) == null)
-                                {
-                                    graph.AddEdge(parentAndChild.getParentPath(), parentAndChild.getChildPath()[i]).Attr.Color = Microsoft.Msagl.Drawing.Color.Black;
-                                    graph.FindNode(parentAndChild.getParentPath()).Label.FontColor = Microsoft.Msagl.Drawing.Color.Black;
-                                    graph.FindNode(parentAndChild.getChildPath()[i]).Label.FontColor = Microsoft.Msagl.Drawing.Color.Black;
-                                    isChanged = true;
-                                }
-                                else
-                                {
-                                    //Menambahkan edge baru ke node yang sudah ada
-                                    bool foundSameEdge = false;
-                                    foreach (var edge in graph.FindNode(parentAndChild.getParentPath()).Edges)
-                                    {
-                                        if (edge.Target.ToString() == parentAndChild.getChildPath()[i])
-                                        {
-                                            foundSameEdge = true;
-                                        };
-                                    }
-
-                                    if (!foundSameEdge)
-                                    {
-                                        graph.AddEdge(parentAndChild.getParentPath(), parentAndChild.getChildPath()[i]).Attr.Color = Microsoft.Msagl.Drawing.Color.Black;
-                                        graph.FindNode(parentAndChild.getChildPath()[i]).Label.FontColor = Microsoft.Msagl.Drawing.Color.Black;
-                                        isChanged = true;
-                                    }
-                                }
-                            }
-                            else if (parentAndChild.getCheck() == 1 || parentAndChild.getCheck() == 2)
-                            {
-                                //Mewarnai edge dengan mencari edge yang sama
+                                // Bila edge dan node anak sudah ada tidak perlu menambah edge lagi
+                                bool foundSameEdge = false;
                                 foreach (var edge in graph.FindNode(parentAndChild.getParentPath()).Edges)
                                 {
                                     if (edge.Target.ToString() == parentAndChild.getChildPath()[i])
                                     {
-                                        if (parentAndChild.getCheck() == 1)
-                                        {
+                                        foundSameEdge = true;
+                                    }
+                                }
+                                // Bila edge dan node anak belum ada tambah
+                                if (!foundSameEdge)
+                                {
+                                    graph.AddEdge(parentAndChild.getParentPath(), parentAndChild.getChildPath()[i]).Attr.Color = Microsoft.Msagl.Drawing.Color.Black;
+                                    graph.FindNode(parentAndChild.getChildPath()[i]).Label.FontColor = Microsoft.Msagl.Drawing.Color.Black;
+                                    isChanged = true;
+                                }
+                            }
+                            // Pewarnaan edge dan node anak
+                            else if (parentAndChild.getCheck() == 1 || parentAndChild.getCheck() == 2) {
+                                // Iterasi semua edge suatu parentPath
+                                foreach (var edge in graph.FindNode(parentAndChild.getParentPath()).Edges)
+                                {
+                                    if (edge.Target.ToString() == parentAndChild.getChildPath()[i]) {
+                                        // Pewarnaan edge dan node bila anak salah menjadi merah
+                                        if (parentAndChild.getCheck() == 1) {
                                             edge.Attr.Color = Microsoft.Msagl.Drawing.Color.Red;
                                             graph.FindNode(parentAndChild.getChildPath()[i]).Label.FontColor = Microsoft.Msagl.Drawing.Color.Red;
                                             isChanged = true;
                                         }
+                                        // Pewarnaan edge dan node bila anak benar dan
+                                        // semua parent hingga rootPath menjadi biru
                                         else if (parentAndChild.getCheck() == 2)
                                         {
                                             Microsoft.Msagl.Drawing.Edge currentEdge = edge;
                                             Microsoft.Msagl.Drawing.Node currentNode = edge.TargetNode;
                                             currentEdge.TargetNode.Label.FontColor = Microsoft.Msagl.Drawing.Color.DodgerBlue;
+                                            // iterasi edge dan node sampai ke rootPath
                                             while (currentNode.Id != rootPath)
                                             {
                                                 currentEdge.Attr.Color = Microsoft.Msagl.Drawing.Color.DodgerBlue;
@@ -359,22 +308,24 @@ namespace Folder_Crawler
                                                     currentEdge = inedges;
                                                 }
                                             }
-
                                             isChanged = true;
                                         }
-                                    };
+                                    }
                                 }
                             }
+
+                            // Mengubah label setiap node ke nama folder/file saja
                             graph.FindNode(parentAndChild.getParentPath()).LabelText = parentAndChild.getParentName();
                             graph.FindNode(parentAndChild.getParentPath()).Attr.Shape = Microsoft.Msagl.Drawing.Shape.Plaintext;
                             graph.FindNode(parentAndChild.getChildPath()[i]).LabelText = parentAndChild.getChildName()[i];
                             graph.FindNode(parentAndChild.getChildPath()[i]).Attr.Shape = Microsoft.Msagl.Drawing.Shape.Plaintext;
+                            // Ubah graf dengan perubahan pada saat iterasi
                             updateGraph(viewer, graph, graphPanel);
                         }
                     }
                     graphcounter++;
-                    
-                    // add hyperlink
+
+                    // Tambah hyperlink untuk setiap file yang ditemukan
                     foreach (string path in targetPath)
                     {
                         Krypton.Toolkit.KryptonLinkLabel Hasil = new Krypton.Toolkit.KryptonLinkLabel();
@@ -383,35 +334,30 @@ namespace Folder_Crawler
                         Hasil.AutoSize = true;
                         Hasil.Click += new EventHandler(Hasil_Click);
                     }
-
+                    // mematikan sempahore
                     algoRunning = false;
+                    
                     Status.Text = "Penggambaran pohon selesai!";
                     DitemukanLabel.Visible = true;
                     // Time Spent
                     TimeLabel.Text = "Waktu yang dibutuhkan algoritma: " + totalTime.ToString() + " ms";
                 }
-            } else {
+            }
+            else {
+                // Bila semaphore nyala masuk ke sini, artinya algoritma atau pembentukan tree
+                // sebelumnya belum selesai dan butuh ditunggu
                 WarningLabel.Text = "! Tunggu hingga penggambaran pohon selesai";
                 WarningLabel.Visible = true;
             }
-
         }
 
-        private void BFS_CheckedChanged(object sender, EventArgs e)
-        {
-        }
+        private void BFS_CheckedChanged(object sender, EventArgs e) { }
 
-        private void kryptonTextBox1_TextChanged(object sender, EventArgs e)
-        {
-        }
+        private void kryptonTextBox1_TextChanged(object sender, EventArgs e) { }
 
-        private void DFS_CheckedChanged(object sender, EventArgs e)
-        {
-        }
+        private void DFS_CheckedChanged(object sender, EventArgs e) { }
 
-        private void SemuaFileCheck_CheckedChanged(object sender, EventArgs e)
-        {
-        }
+        private void SemuaFileCheck_CheckedChanged(object sender, EventArgs e) { }
 
         void Hasil_Click(object sender, EventArgs e)
         {
@@ -419,25 +365,13 @@ namespace Folder_Crawler
             System.Diagnostics.Process.Start("explorer.exe", Path.GetDirectoryName(Hasil.Text));
         }
 
-        private void WelcomeLabel_Paint(object sender, PaintEventArgs e)
-        {
+        private void WelcomeLabel_Paint(object sender, PaintEventArgs e) { }
 
-        }
+        private void PohonLabel_Paint(object sender, PaintEventArgs e) { }
 
-        private void PohonLabel_Paint(object sender, PaintEventArgs e)
-        {
+        private void graphPanel_Paint(object sender, PaintEventArgs e) { }
 
-        }
-
-        private void graphPanel_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void kryptonLabel1_Paint_1(object sender, PaintEventArgs e)
-        {
-
-        }
+        private void kryptonLabel1_Paint_1(object sender, PaintEventArgs e) { }
 
         private void trackBar1_Scroll(object sender, EventArgs e)
         {
@@ -449,7 +383,8 @@ namespace Folder_Crawler
             if (algoRunning)
             {
                 Status.Text = "Menggambar pohon...";
-            } else
+            }
+            else
             {
                 Status.Text = "Selesai!";
             }

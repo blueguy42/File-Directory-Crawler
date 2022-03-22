@@ -1,11 +1,8 @@
-﻿using System;
-using System.Diagnostics;
+﻿using System.Diagnostics;
 using TreeNodes;
 
 namespace Folder_Crawler_Algo
 {
-    // Ini mending file dipisah apa engga ya
-    
     class Main
     {
         public static void RunAlgorithm(string fileName, string rootPath, Boolean findAllOccurrence, int algorithm, ref string[] targetPath, ref treeNode[] treeNodes, ref long totalTime)
@@ -19,7 +16,7 @@ namespace Folder_Crawler_Algo
             string[] allDirPath = new string[] { };
             string[] allRootsPath = new string[] { };
 
-            BFSorDFSAlgo.BFSorDFS(algorithm, fileName, rootPath, ref allDirPath,  ref allRootsPath, findAllOccurrence);
+            BFSorDFSAlgo.BFSorDFS(algorithm, fileName, rootPath, ref allDirPath, ref allRootsPath, findAllOccurrence);
 
             //Check files
             fileChecker(fileName, allDirPath, ref targetPath, findAllOccurrence);
@@ -30,8 +27,6 @@ namespace Folder_Crawler_Algo
             stopwatch.Stop();
             totalTime = stopwatch.ElapsedMilliseconds;
         }
-
-        
         static void convertDirsToNodes(string[] tempDirs, string[] tempRoots, ref treeNode[] treeNodes, bool findAllOccurrenc, string fileName)
         {
             //Instantiate tree nodes from dirs in root path
@@ -57,28 +52,9 @@ namespace Folder_Crawler_Algo
                     allNewRoots = allNewRoots.Concat(Directory.GetFiles(root)).ToArray();
                     newTreeNodes.Insert(newTreeNodes.Count - 1, new treeNode(root, allNewRoots, 0, false));
                     currRootPath = tempRoots[i];
-
-                    /*
-                    //Add all files inn dir
-                    var files = Directory.GetFiles(root);
-                    foreach (string file in files)
-                    {
-                        // Add checked files to parentAndChildren
-                        treeNode newParentAndChild = new treeNode(root, new string[] { file }, 1, true);
-                        newTreeNodes.Insert(newTreeNodes.Count - 1, newParentAndChild);
-
-                        //Find all occurence
-                        if (Path.GetFileName(file) == fileName && !findAllOccurrenc)
-                        {
-                            i = -999;
-                            break;
-                        }
-                    }
-                    */
                 }
-
                 newTreeNodes.Insert(newTreeNodes.Count - 1, new treeNode(root, new string[] { dir }, 1, false));
-                if (Path.GetFileName(dir) == fileName && (!File.GetAttributes(dir).HasFlag(FileAttributes.Directory))) 
+                if (Path.GetFileName(dir) == fileName && (!File.GetAttributes(dir).HasFlag(FileAttributes.Directory)))
                 {
                     newTreeNodes.Insert(newTreeNodes.Count - 1, new treeNode(root, new string[] { dir }, 2, true));
                     if (!findAllOccurrenc)
@@ -86,16 +62,12 @@ namespace Folder_Crawler_Algo
                         break;
                     }
                 }
-
-
                 i++;
             }
 
-            //newTreeNodes.Insert(0, new treeNode(tempRoots[0], Directory.GetDirectories(tempRoots[0]), 0, false));
             newTreeNodes.RemoveAt(newTreeNodes.Count - 1);
             treeNodes = newTreeNodes.ToArray();
         }
-
         static void fileChecker(string fileName, string[] allDirPath, ref string[] targetPath, bool findAllOccurrence)
         {
             // Check files
@@ -119,21 +91,17 @@ namespace Folder_Crawler_Algo
                 i++;
             }
         }
-
         static Boolean CheckFileInsideFolder(String fileName, String path)
         {
             var files = Directory.GetFiles(path);
             foreach (string file in files)
             {
-
                 if (Path.GetFileName(file) == fileName)
                 {
                     Console.WriteLine("Found");
                     return true;
                 }
             }
-
-
             return false;
         }
     }

@@ -13,9 +13,6 @@ namespace Folder_Crawler
 
             ApplicationConfiguration.Initialize();
             Application.Run(new Form1());
-
         }
-
-
     }
 }

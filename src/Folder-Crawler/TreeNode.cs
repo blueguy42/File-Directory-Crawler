@@ -1,11 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace TreeNodes
+﻿namespace TreeNodes
 {
+    // Class to help make node for tree
     public class treeNode
     {
         string parentPath;
@@ -14,7 +9,6 @@ namespace TreeNodes
         string[] childName;
         int check;
         bool isFile;
-
         public treeNode()
         {
             parentPath = "";
@@ -24,7 +18,6 @@ namespace TreeNodes
             check = 0;
             isFile = false;
         }
-
         public treeNode(string parentPath, string[] childPath, int check, bool isFile)
         {
             this.parentPath = parentPath;
@@ -34,36 +27,14 @@ namespace TreeNodes
             this.check = check;
             this.isFile = isFile;
 
-            foreach (var child in childPath)
-            {
+            foreach (var child in childPath) {
                 this.childName = this.childName.Concat(new String[] { Path.GetFileName(child) }).ToArray();
             }
         }
-
-        public string getParentPath()
-        {
-            return this.parentPath;
-        }
-
-        public string getParentName()
-        {
-            return this.parentName;
-        }
-
-        public string[] getChildPath()
-        {
-            return this.childPath;
-        }
-        public string[] getChildName()
-        {
-            return this.childName;
-        }
-
-        public int getCheck()
-        {
-            return this.check;
-        }
+        public string getParentPath() {return this.parentPath;}
+        public string getParentName() {return this.parentName;}
+        public string[] getChildPath() {return this.childPath;}
+        public string[] getChildName() {return this.childName;}
+        public int getCheck() {return this.check;}
     }
-
-
 }
