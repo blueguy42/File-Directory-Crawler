@@ -41,7 +41,6 @@
             this.BFS = new Krypton.Toolkit.KryptonRadioButton();
             this.DFS = new Krypton.Toolkit.KryptonRadioButton();
             this.PohonLabel = new Krypton.Toolkit.KryptonLabel();
-            this.kryptonButton2 = new Krypton.Toolkit.KryptonButton();
             this.kryptonWrapLabel1 = new Krypton.Toolkit.KryptonWrapLabel();
             this.Title = new Krypton.Toolkit.KryptonLabel();
             this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
@@ -57,6 +56,7 @@
             this.DelayTime = new Krypton.Toolkit.KryptonWrapLabel();
             this.Hasils = new System.Windows.Forms.FlowLayoutPanel();
             this.Status = new Krypton.Toolkit.KryptonLabel();
+            this.Pembatas = new Krypton.Toolkit.KryptonButton();
             ((System.ComponentModel.ISupportInitialize)(this.graphPanel)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).BeginInit();
             this.SuspendLayout();
@@ -331,40 +331,6 @@
             this.PohonLabel.Visible = false;
             this.PohonLabel.Paint += new System.Windows.Forms.PaintEventHandler(this.PohonLabel_Paint);
             // 
-            // kryptonButton2
-            // 
-            this.kryptonButton2.Location = new System.Drawing.Point(409, 19);
-            this.kryptonButton2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.kryptonButton2.Name = "kryptonButton2";
-            this.kryptonButton2.Size = new System.Drawing.Size(3, 600);
-            this.kryptonButton2.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(181)))), ((int)(((byte)(191)))), ((int)(((byte)(198)))));
-            this.kryptonButton2.StateCommon.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(181)))), ((int)(((byte)(191)))), ((int)(((byte)(198)))));
-            this.kryptonButton2.StateCommon.Border.DrawBorders = ((Krypton.Toolkit.PaletteDrawBorders)((((Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.kryptonButton2.StateCommon.Border.Rounding = 25F;
-            this.kryptonButton2.StateCommon.Border.Width = 0;
-            this.kryptonButton2.StateNormal.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(181)))), ((int)(((byte)(191)))), ((int)(((byte)(198)))));
-            this.kryptonButton2.StateNormal.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(181)))), ((int)(((byte)(191)))), ((int)(((byte)(198)))));
-            this.kryptonButton2.StateNormal.Border.DrawBorders = ((Krypton.Toolkit.PaletteDrawBorders)((((Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.kryptonButton2.StateNormal.Border.Width = 0;
-            this.kryptonButton2.StatePressed.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(181)))), ((int)(((byte)(191)))), ((int)(((byte)(198)))));
-            this.kryptonButton2.StatePressed.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(181)))), ((int)(((byte)(191)))), ((int)(((byte)(198)))));
-            this.kryptonButton2.StatePressed.Border.DrawBorders = ((Krypton.Toolkit.PaletteDrawBorders)((((Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.kryptonButton2.StatePressed.Border.Width = 0;
-            this.kryptonButton2.StateTracking.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(181)))), ((int)(((byte)(191)))), ((int)(((byte)(198)))));
-            this.kryptonButton2.StateTracking.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(181)))), ((int)(((byte)(191)))), ((int)(((byte)(198)))));
-            this.kryptonButton2.StateTracking.Border.DrawBorders = ((Krypton.Toolkit.PaletteDrawBorders)((((Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.kryptonButton2.StateTracking.Border.Width = 0;
-            this.kryptonButton2.TabIndex = 19;
-            this.kryptonButton2.Values.Text = "kryptonButton2";
-            // 
             // kryptonWrapLabel1
             // 
             this.kryptonWrapLabel1.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
@@ -582,6 +548,21 @@
             this.Status.Visible = false;
             this.Status.Paint += new System.Windows.Forms.PaintEventHandler(this.Status_Paint);
             // 
+            // Pembatas
+            // 
+            this.Pembatas.Location = new System.Drawing.Point(415, 38);
+            this.Pembatas.Name = "Pembatas";
+            this.Pembatas.Size = new System.Drawing.Size(3, 567);
+            this.Pembatas.StateCommon.Back.Color1 = System.Drawing.Color.Silver;
+            this.Pembatas.StateCommon.Back.Color2 = System.Drawing.Color.Silver;
+            this.Pembatas.StateCommon.Border.DrawBorders = ((Krypton.Toolkit.PaletteDrawBorders)((((Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.Pembatas.StateCommon.Border.Rounding = 50F;
+            this.Pembatas.StateCommon.Border.Width = 0;
+            this.Pembatas.TabIndex = 57;
+            this.Pembatas.Values.Text = "";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -590,6 +571,7 @@
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.BlurValues.EnableBlur = true;
             this.ClientSize = new System.Drawing.Size(1298, 643);
+            this.Controls.Add(this.Pembatas);
             this.Controls.Add(this.Status);
             this.Controls.Add(this.WelcomeLabel);
             this.Controls.Add(this.DelayTime);
@@ -603,7 +585,6 @@
             this.Controls.Add(this.StartButton);
             this.Controls.Add(this.Title);
             this.Controls.Add(this.kryptonWrapLabel1);
-            this.Controls.Add(this.kryptonButton2);
             this.Controls.Add(this.PohonLabel);
             this.Controls.Add(this.DFS);
             this.Controls.Add(this.BFS);
@@ -643,7 +624,6 @@
         private Krypton.Toolkit.KryptonRadioButton BFS;
         private Krypton.Toolkit.KryptonRadioButton DFS;
         private Krypton.Toolkit.KryptonLabel PohonLabel;
-        private Krypton.Toolkit.KryptonButton kryptonButton2;
         private Krypton.Toolkit.KryptonWrapLabel kryptonWrapLabel1;
         private Krypton.Toolkit.KryptonLabel Title;
         private FolderBrowserDialog folderBrowserDialog1;
@@ -659,5 +639,6 @@
         private Krypton.Toolkit.KryptonWrapLabel DelayTime;
         private FlowLayoutPanel Hasils;
         private Krypton.Toolkit.KryptonLabel Status;
+        private Krypton.Toolkit.KryptonButton Pembatas;
     }
 }
