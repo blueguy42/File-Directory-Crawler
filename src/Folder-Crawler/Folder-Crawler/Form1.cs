@@ -237,7 +237,6 @@ namespace Folder_Crawler
                     WelcomeLabel.Visible = false;
                     WarningLabel.Visible = false;
                     PohonLabel.Visible = true;
-                    BatalButton.Visible = true;
                     graphPanel.Visible = true;
 
                     String[] dirPath = new string[] { };
@@ -251,7 +250,19 @@ namespace Folder_Crawler
                     {
                         DitemukanLabel.Text = "Ketemu!";
                         DitemukanLabel.Visible = true;
-                        HasilLabel.Text = targetPath[0];
+
+                        int Y = 477;
+
+                        foreach (string path in targetPath)
+                        {
+                            Krypton.Toolkit.KryptonLinkLabel Hasil = new Krypton.Toolkit.KryptonLinkLabel();
+                            Hasils.Controls.Add(Hasil);
+                            Hasil.Text = path;
+                            Hasil.AutoSize = true;
+                            Hasil.Click += new EventHandler(Hasil_Click);
+                            //Hasil.Location = new Point(452, Y);
+                            Y += 25;
+                        }
                     }
                     else // Ga ketemu
                     {
@@ -285,19 +296,6 @@ namespace Folder_Crawler
                                         parentAndChild.getChildName()[i] + "\n";
                         }
                     }
-
-                    // Debugging dirPath
-
-                    testingConsole.Text = data2;
-                    testingConsole.AutoSize = true;
-                    testingConsole.Visible = false;
-
-
-                    kryptonLabel6.Text = data2;
-                    kryptonLabel6.AutoSize = true;
-                    kryptonLabel6.Visible = false;
-                    kryptonLabel6.BackColor = Color.Blue;
-
 
                     if (!(graphcounter == 0))
                     {
@@ -438,7 +436,12 @@ namespace Folder_Crawler
 
         private void kryptonLinkLabel1_LinkClicked(object sender, EventArgs e)
         {
-            System.Diagnostics.Process.Start("explorer.exe", Path.GetDirectoryName(HasilLabel.Text));
+        }
+
+        void Hasil_Click(object sender, EventArgs e)
+        {
+            Krypton.Toolkit.KryptonLinkLabel Hasil = (Krypton.Toolkit.KryptonLinkLabel)sender;
+            System.Diagnostics.Process.Start("explorer.exe", Path.GetDirectoryName(Hasil.Text));
         }
 
         private void kryptonLabel3_Paint(object sender, PaintEventArgs e)

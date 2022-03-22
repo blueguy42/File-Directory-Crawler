@@ -49,18 +49,14 @@
             this.DitemukanLabel = new Krypton.Toolkit.KryptonLabel();
             this.WarningLabel = new Krypton.Toolkit.KryptonLabel();
             this.WelcomeLabel = new Krypton.Toolkit.KryptonLabel();
-            this.HasilLabel = new Krypton.Toolkit.KryptonLinkLabel();
             this.TimeTitleLable = new Krypton.Toolkit.KryptonLabel();
             this.TimeLabel = new Krypton.Toolkit.KryptonLabel();
-            this.kryptonLabel4 = new Krypton.Toolkit.KryptonLabel();
             this.graphPanel = new Krypton.Toolkit.KryptonPanel();
-            this.testingConsole = new Krypton.Toolkit.KryptonLabel();
             this.trackBar1 = new System.Windows.Forms.TrackBar();
             this.kryptonLabel1 = new Krypton.Toolkit.KryptonLabel();
             this.DelayTime = new Krypton.Toolkit.KryptonWrapLabel();
-            this.kryptonLabel6 = new Krypton.Toolkit.KryptonLabel();
+            this.Hasils = new System.Windows.Forms.FlowLayoutPanel();
             ((System.ComponentModel.ISupportInitialize)(this.graphPanel)).BeginInit();
-            this.graphPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -173,7 +169,7 @@
             // 
             this.BrowseFolderButton.ButtonStyle = Krypton.Toolkit.ButtonStyle.Custom1;
             this.BrowseFolderButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.BrowseFolderButton.Location = new System.Drawing.Point(18, 141);
+            this.BrowseFolderButton.Location = new System.Drawing.Point(12, 164);
             this.BrowseFolderButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.BrowseFolderButton.Name = "BrowseFolderButton";
             this.BrowseFolderButton.OverrideDefault.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(242)))), ((int)(((byte)(249)))));
@@ -212,7 +208,7 @@
             // 
             this.FolderLabel.AutoSize = false;
             this.FolderLabel.LabelStyle = Krypton.Toolkit.LabelStyle.NormalControl;
-            this.FolderLabel.Location = new System.Drawing.Point(154, 151);
+            this.FolderLabel.Location = new System.Drawing.Point(148, 174);
             this.FolderLabel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.FolderLabel.Name = "FolderLabel";
             this.FolderLabel.Palette = this.kryptonPalette1;
@@ -226,7 +222,7 @@
             // StartingTitle
             // 
             this.StartingTitle.LabelStyle = Krypton.Toolkit.LabelStyle.Custom1;
-            this.StartingTitle.Location = new System.Drawing.Point(18, 112);
+            this.StartingTitle.Location = new System.Drawing.Point(12, 135);
             this.StartingTitle.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.StartingTitle.Name = "StartingTitle";
             this.StartingTitle.Palette = this.kryptonPalette1;
@@ -240,7 +236,7 @@
             // InputTitle
             // 
             this.InputTitle.LabelStyle = Krypton.Toolkit.LabelStyle.Custom1;
-            this.InputTitle.Location = new System.Drawing.Point(18, 200);
+            this.InputTitle.Location = new System.Drawing.Point(12, 223);
             this.InputTitle.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.InputTitle.Name = "InputTitle";
             this.InputTitle.Palette = this.kryptonPalette1;
@@ -258,7 +254,7 @@
             this.kryptonTextBox1.CueHint.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.kryptonTextBox1.CueHint.Padding = new System.Windows.Forms.Padding(0);
             this.kryptonTextBox1.InputControlStyle = Krypton.Toolkit.InputControlStyle.Custom1;
-            this.kryptonTextBox1.Location = new System.Drawing.Point(25, 228);
+            this.kryptonTextBox1.Location = new System.Drawing.Point(19, 251);
             this.kryptonTextBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.kryptonTextBox1.Name = "kryptonTextBox1";
             this.kryptonTextBox1.Palette = this.kryptonPalette1;
@@ -275,7 +271,7 @@
             // 
             // SemuaFileCheck
             // 
-            this.SemuaFileCheck.Location = new System.Drawing.Point(25, 256);
+            this.SemuaFileCheck.Location = new System.Drawing.Point(19, 279);
             this.SemuaFileCheck.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.SemuaFileCheck.Name = "SemuaFileCheck";
             this.SemuaFileCheck.Size = new System.Drawing.Size(282, 20);
@@ -287,7 +283,7 @@
             // kryptonLabel2
             // 
             this.kryptonLabel2.LabelStyle = Krypton.Toolkit.LabelStyle.Custom1;
-            this.kryptonLabel2.Location = new System.Drawing.Point(18, 297);
+            this.kryptonLabel2.Location = new System.Drawing.Point(12, 320);
             this.kryptonLabel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.kryptonLabel2.Name = "kryptonLabel2";
             this.kryptonLabel2.Palette = this.kryptonPalette1;
@@ -299,7 +295,7 @@
             // 
             // BFS
             // 
-            this.BFS.Location = new System.Drawing.Point(25, 325);
+            this.BFS.Location = new System.Drawing.Point(19, 348);
             this.BFS.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.BFS.Name = "BFS";
             this.BFS.Size = new System.Drawing.Size(207, 20);
@@ -310,7 +306,7 @@
             // 
             // DFS
             // 
-            this.DFS.Location = new System.Drawing.Point(25, 349);
+            this.DFS.Location = new System.Drawing.Point(19, 372);
             this.DFS.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.DFS.Name = "DFS";
             this.DFS.Size = new System.Drawing.Size(195, 20);
@@ -322,7 +318,7 @@
             // PohonLabel
             // 
             this.PohonLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.PohonLabel.Location = new System.Drawing.Point(897, 15);
+            this.PohonLabel.Location = new System.Drawing.Point(897, 38);
             this.PohonLabel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.PohonLabel.Name = "PohonLabel";
             this.PohonLabel.Size = new System.Drawing.Size(389, 24);
@@ -354,7 +350,7 @@
             this.kryptonWrapLabel1.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.kryptonWrapLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(57)))), ((int)(((byte)(91)))));
             this.kryptonWrapLabel1.LabelStyle = Krypton.Toolkit.LabelStyle.NormalControl;
-            this.kryptonWrapLabel1.Location = new System.Drawing.Point(19, 64);
+            this.kryptonWrapLabel1.Location = new System.Drawing.Point(13, 87);
             this.kryptonWrapLabel1.Name = "kryptonWrapLabel1";
             this.kryptonWrapLabel1.Size = new System.Drawing.Size(370, 13);
             this.kryptonWrapLabel1.StateCommon.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
@@ -363,7 +359,7 @@
             // 
             // Title
             // 
-            this.Title.Location = new System.Drawing.Point(15, 25);
+            this.Title.Location = new System.Drawing.Point(9, 48);
             this.Title.Margin = new System.Windows.Forms.Padding(0);
             this.Title.Name = "Title";
             this.Title.Palette = this.kryptonPalette1;
@@ -377,7 +373,7 @@
             // 
             this.StartButton.ButtonStyle = Krypton.Toolkit.ButtonStyle.Custom1;
             this.StartButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.StartButton.Location = new System.Drawing.Point(18, 495);
+            this.StartButton.Location = new System.Drawing.Point(19, 519);
             this.StartButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.StartButton.Name = "StartButton";
             this.StartButton.OverrideDefault.Back.Color1 = System.Drawing.Color.CornflowerBlue;
@@ -424,7 +420,7 @@
             // 
             // DitemukanLabel
             // 
-            this.DitemukanLabel.Location = new System.Drawing.Point(452, 425);
+            this.DitemukanLabel.Location = new System.Drawing.Point(452, 448);
             this.DitemukanLabel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.DitemukanLabel.Name = "DitemukanLabel";
             this.DitemukanLabel.Size = new System.Drawing.Size(90, 24);
@@ -436,7 +432,7 @@
             // WarningLabel
             // 
             this.WarningLabel.LabelStyle = Krypton.Toolkit.LabelStyle.Custom1;
-            this.WarningLabel.Location = new System.Drawing.Point(18, 537);
+            this.WarningLabel.Location = new System.Drawing.Point(19, 561);
             this.WarningLabel.Name = "WarningLabel";
             this.WarningLabel.Palette = this.kryptonPalette1;
             this.WarningLabel.PaletteMode = Krypton.Toolkit.PaletteMode.Custom;
@@ -452,7 +448,7 @@
             this.WelcomeLabel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.WelcomeLabel.AutoSize = false;
-            this.WelcomeLabel.Location = new System.Drawing.Point(0, 232);
+            this.WelcomeLabel.Location = new System.Drawing.Point(436, 279);
             this.WelcomeLabel.Name = "WelcomeLabel";
             this.WelcomeLabel.Size = new System.Drawing.Size(834, 69);
             this.WelcomeLabel.StateCommon.LongText.MultiLine = Krypton.Toolkit.InheritBool.True;
@@ -465,18 +461,10 @@
     "e)";
             this.WelcomeLabel.Paint += new System.Windows.Forms.PaintEventHandler(this.WelcomeLabel_Paint);
             // 
-            // HasilLabel
-            // 
-            this.HasilLabel.Location = new System.Drawing.Point(452, 455);
-            this.HasilLabel.Name = "HasilLabel";
-            this.HasilLabel.Size = new System.Drawing.Size(110, 20);
-            this.HasilLabel.TabIndex = 39;
-            this.HasilLabel.Values.Text = "kryptonLinkLabel1";
-            // 
             // TimeTitleLable
             // 
             this.TimeTitleLable.LabelStyle = Krypton.Toolkit.LabelStyle.Custom1;
-            this.TimeTitleLable.Location = new System.Drawing.Point(452, 513);
+            this.TimeTitleLable.Location = new System.Drawing.Point(452, 587);
             this.TimeTitleLable.Name = "TimeTitleLable";
             this.TimeTitleLable.Palette = this.kryptonPalette1;
             this.TimeTitleLable.PaletteMode = Krypton.Toolkit.PaletteMode.Custom;
@@ -489,7 +477,7 @@
             // TimeLabel
             // 
             this.TimeLabel.LabelStyle = Krypton.Toolkit.LabelStyle.Custom1;
-            this.TimeLabel.Location = new System.Drawing.Point(624, 512);
+            this.TimeLabel.Location = new System.Drawing.Point(624, 586);
             this.TimeLabel.Name = "TimeLabel";
             this.TimeLabel.Palette = this.kryptonPalette1;
             this.TimeLabel.PaletteMode = Krypton.Toolkit.PaletteMode.Custom;
@@ -499,19 +487,9 @@
             this.TimeLabel.Values.Text = "0s";
             this.TimeLabel.Visible = false;
             // 
-            // kryptonLabel4
-            // 
-            this.kryptonLabel4.Location = new System.Drawing.Point(580, 427);
-            this.kryptonLabel4.Name = "kryptonLabel4";
-            this.kryptonLabel4.Size = new System.Drawing.Size(88, 20);
-            this.kryptonLabel4.TabIndex = 44;
-            this.kryptonLabel4.Values.Text = "kryptonLabel1";
-            this.kryptonLabel4.Paint += new System.Windows.Forms.PaintEventHandler(this.kryptonLabel4_Paint_1);
-            // 
             // graphPanel
             // 
-            this.graphPanel.Controls.Add(this.WelcomeLabel);
-            this.graphPanel.Location = new System.Drawing.Point(452, 44);
+            this.graphPanel.Location = new System.Drawing.Point(452, 67);
             this.graphPanel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.graphPanel.Name = "graphPanel";
             this.graphPanel.Size = new System.Drawing.Size(818, 367);
@@ -519,18 +497,9 @@
             this.graphPanel.Visible = false;
             this.graphPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.graphPanel_Paint);
             // 
-            // testingConsole
-            // 
-            this.testingConsole.Location = new System.Drawing.Point(452, 15);
-            this.testingConsole.Margin = new System.Windows.Forms.Padding(2);
-            this.testingConsole.Name = "testingConsole";
-            this.testingConsole.Size = new System.Drawing.Size(88, 20);
-            this.testingConsole.TabIndex = 51;
-            this.testingConsole.Values.Text = "kryptonLabel3";
-            // 
             // trackBar1
             // 
-            this.trackBar1.Location = new System.Drawing.Point(21, 425);
+            this.trackBar1.Location = new System.Drawing.Point(15, 448);
             this.trackBar1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.trackBar1.Maximum = 1000;
             this.trackBar1.Minimum = 5;
@@ -543,7 +512,7 @@
             // kryptonLabel1
             // 
             this.kryptonLabel1.LabelStyle = Krypton.Toolkit.LabelStyle.Custom1;
-            this.kryptonLabel1.Location = new System.Drawing.Point(18, 395);
+            this.kryptonLabel1.Location = new System.Drawing.Point(12, 418);
             this.kryptonLabel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.kryptonLabel1.Name = "kryptonLabel1";
             this.kryptonLabel1.Palette = this.kryptonPalette1;
@@ -559,21 +528,22 @@
             this.DelayTime.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.DelayTime.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(57)))), ((int)(((byte)(91)))));
             this.DelayTime.LabelStyle = Krypton.Toolkit.LabelStyle.NormalControl;
-            this.DelayTime.Location = new System.Drawing.Point(238, 425);
+            this.DelayTime.Location = new System.Drawing.Point(232, 448);
             this.DelayTime.Name = "DelayTime";
             this.DelayTime.Size = new System.Drawing.Size(58, 18);
             this.DelayTime.StateCommon.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.DelayTime.StateNormal.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.DelayTime.Text = "25 ms";
             // 
-            // kryptonLabel6
+            // Hasils
             // 
-            this.kryptonLabel6.Location = new System.Drawing.Point(25, 5);
-            this.kryptonLabel6.Margin = new System.Windows.Forms.Padding(2);
-            this.kryptonLabel6.Name = "kryptonLabel6";
-            this.kryptonLabel6.Size = new System.Drawing.Size(88, 20);
-            this.kryptonLabel6.TabIndex = 0;
-            this.kryptonLabel6.Values.Text = "kryptonLabel6";
+            this.Hasils.AutoScroll = true;
+            this.Hasils.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
+            this.Hasils.Location = new System.Drawing.Point(452, 477);
+            this.Hasils.Name = "Hasils";
+            this.Hasils.Size = new System.Drawing.Size(818, 103);
+            this.Hasils.TabIndex = 51;
+            this.Hasils.WrapContents = false;
             // 
             // Form1
             // 
@@ -582,16 +552,14 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(242)))), ((int)(((byte)(249)))));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.ClientSize = new System.Drawing.Size(1298, 643);
-            this.Controls.Add(this.kryptonLabel6);
-            this.Controls.Add(this.testingConsole);
+            this.Controls.Add(this.Hasils);
+            this.Controls.Add(this.WelcomeLabel);
             this.Controls.Add(this.DelayTime);
             this.Controls.Add(this.kryptonLabel1);
             this.Controls.Add(this.trackBar1);
-            this.Controls.Add(this.kryptonLabel4);
             this.Controls.Add(this.graphPanel);
             this.Controls.Add(this.TimeLabel);
             this.Controls.Add(this.TimeTitleLable);
-            this.Controls.Add(this.HasilLabel);
             this.Controls.Add(this.WarningLabel);
             this.Controls.Add(this.DitemukanLabel);
             this.Controls.Add(this.StartButton);
@@ -617,7 +585,6 @@
             this.Text = "Folder Crawler";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.graphPanel)).EndInit();
-            this.graphPanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -644,15 +611,12 @@
         private Krypton.Toolkit.KryptonLabel DitemukanLabel;
         private Krypton.Toolkit.KryptonLabel WarningLabel;
         private Krypton.Toolkit.KryptonLabel WelcomeLabel;
-        private Krypton.Toolkit.KryptonLinkLabel HasilLabel;
         private Krypton.Toolkit.KryptonLabel TimeTitleLable;
         private Krypton.Toolkit.KryptonLabel TimeLabel;
-        private Krypton.Toolkit.KryptonLabel kryptonLabel4;
         private Krypton.Toolkit.KryptonPanel graphPanel;
         private TrackBar trackBar1;
         private Krypton.Toolkit.KryptonLabel kryptonLabel1;
         private Krypton.Toolkit.KryptonWrapLabel DelayTime;
-        private Krypton.Toolkit.KryptonLabel testingConsole;
-        private Krypton.Toolkit.KryptonLabel kryptonLabel6;
+        private FlowLayoutPanel Hasils;
     }
 }
