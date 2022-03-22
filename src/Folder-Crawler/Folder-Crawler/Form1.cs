@@ -234,6 +234,8 @@ namespace Folder_Crawler
                 {
                     algoRunning = true;
 
+                    Status.Text = "Menggambar pohon...";
+                    Status.Visible = true;
                     WelcomeLabel.Visible = false;
                     WarningLabel.Visible = false;
                     PohonLabel.Visible = true;
@@ -250,8 +252,8 @@ namespace Folder_Crawler
                     {
                         DitemukanLabel.Text = "Ketemu!";
                         DitemukanLabel.Visible = true;
-
-                        int Y = 477;
+                        Hasils.Visible = true;
+                        Hasils.Controls.Clear();
 
                         foreach (string path in targetPath)
                         {
@@ -260,12 +262,11 @@ namespace Folder_Crawler
                             Hasil.Text = path;
                             Hasil.AutoSize = true;
                             Hasil.Click += new EventHandler(Hasil_Click);
-                            //Hasil.Location = new Point(452, Y);
-                            Y += 25;
                         }
                     }
                     else // Ga ketemu
                     {
+                        Hasils.Visible = false;
                         DitemukanLabel.Text = "File tidak ditemukan :(";
                         DitemukanLabel.Visible = true;
                     }
@@ -406,9 +407,10 @@ namespace Folder_Crawler
                     graphcounter++;
 
                     algoRunning = false;
+                    Status.Text = "Penggambaran pohon selesai!";
                 }
             } else {
-                WarningLabel.Text = "! Tunggu hingga penggambaran tree selesai";
+                WarningLabel.Text = "! Tunggu hingga penggambaran pohon selesai";
                 WarningLabel.Visible = true;
             }
         }
@@ -482,6 +484,17 @@ namespace Folder_Crawler
         private void kryptonLabel4_Paint_1(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void Status_Paint(object sender, PaintEventArgs e)
+        {
+            if (algoRunning)
+            {
+                Status.Text = "Menggambar pohon...";
+            } else
+            {
+                Status.Text = "Selesai!";
+            }
         }
     }
 }
