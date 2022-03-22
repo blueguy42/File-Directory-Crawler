@@ -232,7 +232,7 @@ namespace Folder_Crawler
                     String[] targetPath = new string[] { };
 
                     //Run Algorithm
-                    Algorithm.RunAlgorithm(fileName, rootPath, findAllOccurrence, algorithm, ref targetPath, ref parentAndChildren, ref totalTime);
+                    Main.RunAlgorithm(fileName, rootPath, findAllOccurrence, algorithm, ref targetPath, ref parentAndChildren, ref totalTime);
 
                     // Ketemu
                     if (targetPath.Length > 0)

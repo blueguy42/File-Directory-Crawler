@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Folder_Crawler
+namespace TreeNodes
 {
     public class treeNode
     {
