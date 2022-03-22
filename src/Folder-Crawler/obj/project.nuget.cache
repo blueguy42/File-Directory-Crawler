@@ -1,0 +1,32 @@
+{
+  "version": 2,
+  "dgSpecHash": "Gdkjl2gZxYc0YQvb8D414FRYm/gmKC9JIlzs0syz2AqZD/fGrM1NlwDQq8vJTk1/uczQ0Fjm4SrwQAbWyrB6tw==",
+  "success": true,
+  "projectFilePath": "D:\\GitHub\\Folder-Crawler\\src\\Folder-Crawler\\Folder-Crawler.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\ahmad\\.nuget\\packages\\automaticgraphlayout\\1.1.11\\automaticgraphlayout.1.1.11.nupkg.sha512",
+    "C:\\Users\\ahmad\\.nuget\\packages\\automaticgraphlayout.drawing\\1.1.11\\automaticgraphlayout.drawing.1.1.11.nupkg.sha512",
+    "C:\\Users\\ahmad\\.nuget\\packages\\automaticgraphlayout.graphviewergdi\\1.1.11\\automaticgraphlayout.graphviewergdi.1.1.11.nupkg.sha512",
+    "C:\\Users\\ahmad\\.nuget\\packages\\automaticgraphlayout.wpfgraphcontrol\\1.1.11\\automaticgraphlayout.wpfgraphcontrol.1.1.11.nupkg.sha512",
+    "C:\\Users\\ahmad\\.nuget\\packages\\krypton.docking\\60.22.2.32\\krypton.docking.60.22.2.32.nupkg.sha512",
+    "C:\\Users\\ahmad\\.nuget\\packages\\krypton.navigator\\60.22.2.32\\krypton.navigator.60.22.2.32.nupkg.sha512",
+    "C:\\Users\\ahmad\\.nuget\\packages\\krypton.ribbon\\60.22.2.32\\krypton.ribbon.60.22.2.32.nupkg.sha512",
+    "C:\\Users\\ahmad\\.nuget\\packages\\krypton.toolkit\\60.22.2.32\\krypton.toolkit.60.22.2.32.nupkg.sha512",
+    "C:\\Users\\ahmad\\.nuget\\packages\\krypton.workspace\\60.22.2.32\\krypton.workspace.60.22.2.32.nupkg.sha512",
+    "C:\\Users\\ahmad\\.nuget\\packages\\kryptonpaletteselectors\\1.2.2\\kryptonpaletteselectors.1.2.2.nupkg.sha512",
+    "C:\\Users\\ahmad\\.nuget\\packages\\materialdesigncolors\\2.0.4\\materialdesigncolors.2.0.4.nupkg.sha512",
+    "C:\\Users\\ahmad\\.nuget\\packages\\materialdesignthemes\\4.3.0\\materialdesignthemes.4.3.0.nupkg.sha512"
+  ],
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'KryptonPaletteSelectors 1.2.2' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework 'net6.0-windows7.0'. This package may not be fully compatible with your project.",
+      "libraryId": "KryptonPaletteSelectors",
+      "targetGraphs": [
+        "net6.0-windows7.0"
+      ]
+    }
+  ]
+}

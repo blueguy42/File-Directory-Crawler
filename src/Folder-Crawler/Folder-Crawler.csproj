@@ -1,0 +1,88 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <RootNamespace>Folder_Crawler</RootNamespace>
+    <Nullable>enable</Nullable>
+    <UseWindowsForms>true</UseWindowsForms>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Resources\Poppins-Black.ttf" />
+    <None Remove="Resources\Poppins-BlackItalic.ttf" />
+    <None Remove="Resources\Poppins-Bold.ttf" />
+    <None Remove="Resources\Poppins-BoldItalic.ttf" />
+    <None Remove="Resources\Poppins-ExtraBold.ttf" />
+    <None Remove="Resources\Poppins-ExtraBoldItalic.ttf" />
+    <None Remove="Resources\Poppins-ExtraLight.ttf" />
+    <None Remove="Resources\Poppins-ExtraLightItalic.ttf" />
+    <None Remove="Resources\Poppins-Italic.ttf" />
+    <None Remove="Resources\Poppins-Light.ttf" />
+    <None Remove="Resources\Poppins-LightItalic.ttf" />
+    <None Remove="Resources\Poppins-Medium.ttf" />
+    <None Remove="Resources\Poppins-MediumItalic.ttf" />
+    <None Remove="Resources\Poppins-Regular.ttf" />
+    <None Remove="Resources\Poppins-SemiBold.ttf" />
+    <None Remove="Resources\Poppins-SemiBoldItalic.ttf" />
+    <None Remove="Resources\Poppins-Thin.ttf" />
+    <None Remove="Resources\Poppins-ThinItalic.ttf" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\Poppins-Black.ttf" />
+    <EmbeddedResource Include="Resources\Poppins-BlackItalic.ttf" />
+    <EmbeddedResource Include="Resources\Poppins-Bold.ttf" />
+    <EmbeddedResource Include="Resources\Poppins-BoldItalic.ttf" />
+    <EmbeddedResource Include="Resources\Poppins-ExtraBold.ttf" />
+    <EmbeddedResource Include="Resources\Poppins-ExtraBoldItalic.ttf" />
+    <EmbeddedResource Include="Resources\Poppins-ExtraLight.ttf" />
+    <EmbeddedResource Include="Resources\Poppins-ExtraLightItalic.ttf" />
+    <EmbeddedResource Include="Resources\Poppins-Italic.ttf" />
+    <EmbeddedResource Include="Resources\Poppins-Light.ttf" />
+    <EmbeddedResource Include="Resources\Poppins-LightItalic.ttf" />
+    <EmbeddedResource Include="Resources\Poppins-Medium.ttf" />
+    <EmbeddedResource Include="Resources\Poppins-MediumItalic.ttf" />
+    <EmbeddedResource Include="Resources\Poppins-Regular.ttf" />
+    <EmbeddedResource Include="Resources\Poppins-SemiBold.ttf" />
+    <EmbeddedResource Include="Resources\Poppins-SemiBoldItalic.ttf" />
+    <EmbeddedResource Include="Resources\Poppins-Thin.ttf" />
+    <EmbeddedResource Include="Resources\Poppins-ThinItalic.ttf" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutomaticGraphLayout" Version="1.1.11" />
+    <PackageReference Include="AutomaticGraphLayout.Drawing" Version="1.1.11" />
+    <PackageReference Include="AutomaticGraphLayout.GraphViewerGDI" Version="1.1.11" />
+    <PackageReference Include="AutomaticGraphLayout.WpfGraphControl" Version="1.1.11" />
+    <PackageReference Include="Krypton.Docking" Version="60.22.2.32" />
+    <PackageReference Include="Krypton.Navigator" Version="60.22.2.32" />
+    <PackageReference Include="Krypton.Ribbon" Version="60.22.2.32" />
+    <PackageReference Include="Krypton.Toolkit" Version="60.22.2.32" />
+    <PackageReference Include="Krypton.Workspace" Version="60.22.2.32" />
+    <PackageReference Include="KryptonPaletteSelectors" Version="1.2.2" />
+    <PackageReference Include="MaterialDesignColors" Version="2.0.4" />
+    <PackageReference Include="MaterialDesignThemes" Version="4.3.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Properties\Resources.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Icons\" />
+  </ItemGroup>
+
+</Project>

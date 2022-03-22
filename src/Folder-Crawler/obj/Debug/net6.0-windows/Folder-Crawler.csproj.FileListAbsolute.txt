@@ -1,0 +1,120 @@
+D:\Cave\Semester4\Folder-Crawler\src\Folder-Crawler\Folder-Crawler\obj\Debug\net6.0-windows\Folder-Crawler.csproj.AssemblyReference.cache
+D:\Cave\Semester4\Folder-Crawler\src\Folder-Crawler\Folder-Crawler\obj\Debug\net6.0-windows\Folder_Crawler.Form1.resources
+D:\Cave\Semester4\Folder-Crawler\src\Folder-Crawler\Folder-Crawler\obj\Debug\net6.0-windows\Folder-Crawler.csproj.GenerateResource.cache
+D:\Cave\Semester4\Folder-Crawler\src\Folder-Crawler\Folder-Crawler\obj\Debug\net6.0-windows\Folder-Crawler.GeneratedMSBuildEditorConfig.editorconfig
+D:\Cave\Semester4\Folder-Crawler\src\Folder-Crawler\Folder-Crawler\obj\Debug\net6.0-windows\Folder-Crawler.AssemblyInfoInputs.cache
+D:\Cave\Semester4\Folder-Crawler\src\Folder-Crawler\Folder-Crawler\obj\Debug\net6.0-windows\Folder-Crawler.AssemblyInfo.cs
+D:\Cave\Semester4\Folder-Crawler\src\Folder-Crawler\Folder-Crawler\obj\Debug\net6.0-windows\Folder-Crawler.csproj.CoreCompileInputs.cache
+D:\Cave\Semester4\Folder-Crawler\src\Folder-Crawler\Folder-Crawler\bin\Debug\net6.0-windows\Folder-Crawler.exe
+D:\Cave\Semester4\Folder-Crawler\src\Folder-Crawler\Folder-Crawler\bin\Debug\net6.0-windows\Folder-Crawler.deps.json
+D:\Cave\Semester4\Folder-Crawler\src\Folder-Crawler\Folder-Crawler\bin\Debug\net6.0-windows\Folder-Crawler.runtimeconfig.json
+D:\Cave\Semester4\Folder-Crawler\src\Folder-Crawler\Folder-Crawler\bin\Debug\net6.0-windows\Folder-Crawler.dll
+D:\Cave\Semester4\Folder-Crawler\src\Folder-Crawler\Folder-Crawler\bin\Debug\net6.0-windows\Folder-Crawler.pdb
+D:\Cave\Semester4\Folder-Crawler\src\Folder-Crawler\Folder-Crawler\obj\Debug\net6.0-windows\Folder-Crawler.dll
+D:\Cave\Semester4\Folder-Crawler\src\Folder-Crawler\Folder-Crawler\obj\Debug\net6.0-windows\refint\Folder-Crawler.dll
+D:\Cave\Semester4\Folder-Crawler\src\Folder-Crawler\Folder-Crawler\obj\Debug\net6.0-windows\Folder-Crawler.pdb
+D:\Cave\Semester4\Folder-Crawler\src\Folder-Crawler\Folder-Crawler\obj\Debug\net6.0-windows\Folder-Crawler.genruntimeconfig.cache
+D:\Cave\Semester4\Folder-Crawler\src\Folder-Crawler\Folder-Crawler\obj\Debug\net6.0-windows\ref\Folder-Crawler.dll
+D:\Cave\Semester4\Folder-Crawler\src\Folder-Crawler\Folder-Crawler\bin\Debug\net6.0-windows\Krypton.Toolkit.dll
+D:\Cave\Semester4\Folder-Crawler\src\Folder-Crawler\Folder-Crawler\bin\Debug\net6.0-windows\UserControls.Krypton.PaletteSelectors.dll
+D:\Cave\Semester4\Folder-Crawler\src\Folder-Crawler\Folder-Crawler\obj\Debug\net6.0-windows\Folder-Crawler.csproj.CopyComplete
+D:\Cave\Semester4\Folder-Crawler\src\Folder-Crawler\Folder-Crawler\bin\Debug\net6.0-windows\Krypton.Docking.dll
+D:\Cave\Semester4\Folder-Crawler\src\Folder-Crawler\Folder-Crawler\bin\Debug\net6.0-windows\Krypton.Navigator.dll
+D:\Cave\Semester4\Folder-Crawler\src\Folder-Crawler\Folder-Crawler\bin\Debug\net6.0-windows\Krypton.Ribbon.dll
+D:\Cave\Semester4\Folder-Crawler\src\Folder-Crawler\Folder-Crawler\bin\Debug\net6.0-windows\Krypton.Workspace.dll
+D:\Cave\Semester4\Folder-Crawler\src\Folder-Crawler\Folder-Crawler\bin\Debug\net6.0-windows\MaterialDesignColors.dll
+D:\Cave\Semester4\Folder-Crawler\src\Folder-Crawler\Folder-Crawler\bin\Debug\net6.0-windows\MaterialDesignThemes.Wpf.dll
+D:\Cave\Semester4\Folder-Crawler\src\Folder-Crawler\Folder-Crawler\obj\Debug\net6.0-windows\Folder_Crawler.Properties.Resources.resources
+C:\Users\rioau\Documents\ITB\2Tingkat 2\Sem2\Tugas\STIMA\Folder-Crawler\src\Folder-Crawler\Folder-Crawler\bin\Debug\net6.0-windows\Folder-Crawler.exe
+C:\Users\rioau\Documents\ITB\2Tingkat 2\Sem2\Tugas\STIMA\Folder-Crawler\src\Folder-Crawler\Folder-Crawler\bin\Debug\net6.0-windows\Folder-Crawler.deps.json
+C:\Users\rioau\Documents\ITB\2Tingkat 2\Sem2\Tugas\STIMA\Folder-Crawler\src\Folder-Crawler\Folder-Crawler\bin\Debug\net6.0-windows\Folder-Crawler.runtimeconfig.json
+C:\Users\rioau\Documents\ITB\2Tingkat 2\Sem2\Tugas\STIMA\Folder-Crawler\src\Folder-Crawler\Folder-Crawler\bin\Debug\net6.0-windows\Folder-Crawler.dll
+C:\Users\rioau\Documents\ITB\2Tingkat 2\Sem2\Tugas\STIMA\Folder-Crawler\src\Folder-Crawler\Folder-Crawler\bin\Debug\net6.0-windows\Folder-Crawler.pdb
+C:\Users\rioau\Documents\ITB\2Tingkat 2\Sem2\Tugas\STIMA\Folder-Crawler\src\Folder-Crawler\Folder-Crawler\bin\Debug\net6.0-windows\Krypton.Docking.dll
+C:\Users\rioau\Documents\ITB\2Tingkat 2\Sem2\Tugas\STIMA\Folder-Crawler\src\Folder-Crawler\Folder-Crawler\bin\Debug\net6.0-windows\Krypton.Navigator.dll
+C:\Users\rioau\Documents\ITB\2Tingkat 2\Sem2\Tugas\STIMA\Folder-Crawler\src\Folder-Crawler\Folder-Crawler\bin\Debug\net6.0-windows\Krypton.Ribbon.dll
+C:\Users\rioau\Documents\ITB\2Tingkat 2\Sem2\Tugas\STIMA\Folder-Crawler\src\Folder-Crawler\Folder-Crawler\bin\Debug\net6.0-windows\Krypton.Toolkit.dll
+C:\Users\rioau\Documents\ITB\2Tingkat 2\Sem2\Tugas\STIMA\Folder-Crawler\src\Folder-Crawler\Folder-Crawler\bin\Debug\net6.0-windows\Krypton.Workspace.dll
+C:\Users\rioau\Documents\ITB\2Tingkat 2\Sem2\Tugas\STIMA\Folder-Crawler\src\Folder-Crawler\Folder-Crawler\bin\Debug\net6.0-windows\UserControls.Krypton.PaletteSelectors.dll
+C:\Users\rioau\Documents\ITB\2Tingkat 2\Sem2\Tugas\STIMA\Folder-Crawler\src\Folder-Crawler\Folder-Crawler\bin\Debug\net6.0-windows\MaterialDesignColors.dll
+C:\Users\rioau\Documents\ITB\2Tingkat 2\Sem2\Tugas\STIMA\Folder-Crawler\src\Folder-Crawler\Folder-Crawler\bin\Debug\net6.0-windows\MaterialDesignThemes.Wpf.dll
+C:\Users\rioau\Documents\ITB\2Tingkat 2\Sem2\Tugas\STIMA\Folder-Crawler\src\Folder-Crawler\Folder-Crawler\obj\Debug\net6.0-windows\Folder-Crawler.csproj.AssemblyReference.cache
+C:\Users\rioau\Documents\ITB\2Tingkat 2\Sem2\Tugas\STIMA\Folder-Crawler\src\Folder-Crawler\Folder-Crawler\obj\Debug\net6.0-windows\Folder_Crawler.Form1.resources
+C:\Users\rioau\Documents\ITB\2Tingkat 2\Sem2\Tugas\STIMA\Folder-Crawler\src\Folder-Crawler\Folder-Crawler\obj\Debug\net6.0-windows\Folder_Crawler.Properties.Resources.resources
+C:\Users\rioau\Documents\ITB\2Tingkat 2\Sem2\Tugas\STIMA\Folder-Crawler\src\Folder-Crawler\Folder-Crawler\obj\Debug\net6.0-windows\Folder-Crawler.csproj.GenerateResource.cache
+C:\Users\rioau\Documents\ITB\2Tingkat 2\Sem2\Tugas\STIMA\Folder-Crawler\src\Folder-Crawler\Folder-Crawler\obj\Debug\net6.0-windows\Folder-Crawler.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\rioau\Documents\ITB\2Tingkat 2\Sem2\Tugas\STIMA\Folder-Crawler\src\Folder-Crawler\Folder-Crawler\obj\Debug\net6.0-windows\Folder-Crawler.AssemblyInfoInputs.cache
+C:\Users\rioau\Documents\ITB\2Tingkat 2\Sem2\Tugas\STIMA\Folder-Crawler\src\Folder-Crawler\Folder-Crawler\obj\Debug\net6.0-windows\Folder-Crawler.AssemblyInfo.cs
+C:\Users\rioau\Documents\ITB\2Tingkat 2\Sem2\Tugas\STIMA\Folder-Crawler\src\Folder-Crawler\Folder-Crawler\obj\Debug\net6.0-windows\Folder-Crawler.csproj.CoreCompileInputs.cache
+C:\Users\rioau\Documents\ITB\2Tingkat 2\Sem2\Tugas\STIMA\Folder-Crawler\src\Folder-Crawler\Folder-Crawler\obj\Debug\net6.0-windows\Folder-Crawler.csproj.CopyComplete
+C:\Users\rioau\Documents\ITB\2Tingkat 2\Sem2\Tugas\STIMA\Folder-Crawler\src\Folder-Crawler\Folder-Crawler\obj\Debug\net6.0-windows\Folder-Crawler.dll
+C:\Users\rioau\Documents\ITB\2Tingkat 2\Sem2\Tugas\STIMA\Folder-Crawler\src\Folder-Crawler\Folder-Crawler\obj\Debug\net6.0-windows\refint\Folder-Crawler.dll
+C:\Users\rioau\Documents\ITB\2Tingkat 2\Sem2\Tugas\STIMA\Folder-Crawler\src\Folder-Crawler\Folder-Crawler\obj\Debug\net6.0-windows\Folder-Crawler.pdb
+C:\Users\rioau\Documents\ITB\2Tingkat 2\Sem2\Tugas\STIMA\Folder-Crawler\src\Folder-Crawler\Folder-Crawler\obj\Debug\net6.0-windows\Folder-Crawler.genruntimeconfig.cache
+C:\Users\rioau\Documents\ITB\2Tingkat 2\Sem2\Tugas\STIMA\Folder-Crawler\src\Folder-Crawler\Folder-Crawler\obj\Debug\net6.0-windows\ref\Folder-Crawler.dll
+D:\GitHub\Folder-Crawler\src\Folder-Crawler\Folder-Crawler\bin\Debug\net6.0-windows\Folder-Crawler.exe
+D:\GitHub\Folder-Crawler\src\Folder-Crawler\Folder-Crawler\bin\Debug\net6.0-windows\Folder-Crawler.deps.json
+D:\GitHub\Folder-Crawler\src\Folder-Crawler\Folder-Crawler\bin\Debug\net6.0-windows\Folder-Crawler.runtimeconfig.json
+D:\GitHub\Folder-Crawler\src\Folder-Crawler\Folder-Crawler\bin\Debug\net6.0-windows\Folder-Crawler.dll
+D:\GitHub\Folder-Crawler\src\Folder-Crawler\Folder-Crawler\bin\Debug\net6.0-windows\Folder-Crawler.pdb
+D:\GitHub\Folder-Crawler\src\Folder-Crawler\Folder-Crawler\bin\Debug\net6.0-windows\Krypton.Docking.dll
+D:\GitHub\Folder-Crawler\src\Folder-Crawler\Folder-Crawler\bin\Debug\net6.0-windows\Krypton.Navigator.dll
+D:\GitHub\Folder-Crawler\src\Folder-Crawler\Folder-Crawler\bin\Debug\net6.0-windows\Krypton.Ribbon.dll
+D:\GitHub\Folder-Crawler\src\Folder-Crawler\Folder-Crawler\bin\Debug\net6.0-windows\Krypton.Toolkit.dll
+D:\GitHub\Folder-Crawler\src\Folder-Crawler\Folder-Crawler\bin\Debug\net6.0-windows\Krypton.Workspace.dll
+D:\GitHub\Folder-Crawler\src\Folder-Crawler\Folder-Crawler\bin\Debug\net6.0-windows\UserControls.Krypton.PaletteSelectors.dll
+D:\GitHub\Folder-Crawler\src\Folder-Crawler\Folder-Crawler\bin\Debug\net6.0-windows\MaterialDesignColors.dll
+D:\GitHub\Folder-Crawler\src\Folder-Crawler\Folder-Crawler\bin\Debug\net6.0-windows\MaterialDesignThemes.Wpf.dll
+D:\GitHub\Folder-Crawler\src\Folder-Crawler\Folder-Crawler\obj\Debug\net6.0-windows\Folder-Crawler.csproj.AssemblyReference.cache
+D:\GitHub\Folder-Crawler\src\Folder-Crawler\Folder-Crawler\obj\Debug\net6.0-windows\Folder_Crawler.Form1.resources
+D:\GitHub\Folder-Crawler\src\Folder-Crawler\Folder-Crawler\obj\Debug\net6.0-windows\Folder_Crawler.Properties.Resources.resources
+D:\GitHub\Folder-Crawler\src\Folder-Crawler\Folder-Crawler\obj\Debug\net6.0-windows\Folder-Crawler.csproj.GenerateResource.cache
+D:\GitHub\Folder-Crawler\src\Folder-Crawler\Folder-Crawler\obj\Debug\net6.0-windows\Folder-Crawler.GeneratedMSBuildEditorConfig.editorconfig
+D:\GitHub\Folder-Crawler\src\Folder-Crawler\Folder-Crawler\obj\Debug\net6.0-windows\Folder-Crawler.AssemblyInfoInputs.cache
+D:\GitHub\Folder-Crawler\src\Folder-Crawler\Folder-Crawler\obj\Debug\net6.0-windows\Folder-Crawler.AssemblyInfo.cs
+D:\GitHub\Folder-Crawler\src\Folder-Crawler\Folder-Crawler\obj\Debug\net6.0-windows\Folder-Crawler.csproj.CoreCompileInputs.cache
+D:\GitHub\Folder-Crawler\src\Folder-Crawler\Folder-Crawler\obj\Debug\net6.0-windows\Folder-Crawler.csproj.CopyComplete
+D:\GitHub\Folder-Crawler\src\Folder-Crawler\Folder-Crawler\obj\Debug\net6.0-windows\Folder-Crawler.dll
+D:\GitHub\Folder-Crawler\src\Folder-Crawler\Folder-Crawler\obj\Debug\net6.0-windows\refint\Folder-Crawler.dll
+D:\GitHub\Folder-Crawler\src\Folder-Crawler\Folder-Crawler\obj\Debug\net6.0-windows\Folder-Crawler.pdb
+D:\GitHub\Folder-Crawler\src\Folder-Crawler\Folder-Crawler\obj\Debug\net6.0-windows\Folder-Crawler.genruntimeconfig.cache
+D:\GitHub\Folder-Crawler\src\Folder-Crawler\Folder-Crawler\obj\Debug\net6.0-windows\ref\Folder-Crawler.dll
+D:\GitHub\Folder-Crawler\src\Folder-Crawler\Folder-Crawler\bin\Debug\net6.0-windows\AutomaticGraphLayout.dll
+D:\GitHub\Folder-Crawler\src\Folder-Crawler\Folder-Crawler\bin\Debug\net6.0-windows\AutomaticGraphLayout.Drawing.dll
+D:\GitHub\Folder-Crawler\src\Folder-Crawler\Folder-Crawler\bin\Debug\net6.0-windows\Microsoft.Msagl.GraphViewerGdi.dll
+D:\GitHub\Folder-Crawler\src\Folder-Crawler\Folder-Crawler\bin\Debug\net6.0-windows\Microsoft.Msagl.WpfGraphControl.dll
+D:\Cave\Semester4\Folder-Crawler\src\Folder-Crawler\Folder-Crawler\bin\Debug\net6.0-windows\AutomaticGraphLayout.dll
+D:\Cave\Semester4\Folder-Crawler\src\Folder-Crawler\Folder-Crawler\bin\Debug\net6.0-windows\AutomaticGraphLayout.Drawing.dll
+D:\Cave\Semester4\Folder-Crawler\src\Folder-Crawler\Folder-Crawler\bin\Debug\net6.0-windows\Microsoft.Msagl.GraphViewerGdi.dll
+D:\Cave\Semester4\Folder-Crawler\src\Folder-Crawler\Folder-Crawler\bin\Debug\net6.0-windows\Microsoft.Msagl.WpfGraphControl.dll
+D:\GitHub\Folder-Crawler\src\Folder-Crawler\bin\Debug\net6.0-windows\Folder-Crawler.exe
+D:\GitHub\Folder-Crawler\src\Folder-Crawler\bin\Debug\net6.0-windows\Folder-Crawler.deps.json
+D:\GitHub\Folder-Crawler\src\Folder-Crawler\bin\Debug\net6.0-windows\Folder-Crawler.runtimeconfig.json
+D:\GitHub\Folder-Crawler\src\Folder-Crawler\bin\Debug\net6.0-windows\Folder-Crawler.dll
+D:\GitHub\Folder-Crawler\src\Folder-Crawler\bin\Debug\net6.0-windows\Folder-Crawler.pdb
+D:\GitHub\Folder-Crawler\src\Folder-Crawler\bin\Debug\net6.0-windows\AutomaticGraphLayout.dll
+D:\GitHub\Folder-Crawler\src\Folder-Crawler\bin\Debug\net6.0-windows\AutomaticGraphLayout.Drawing.dll
+D:\GitHub\Folder-Crawler\src\Folder-Crawler\bin\Debug\net6.0-windows\Microsoft.Msagl.GraphViewerGdi.dll
+D:\GitHub\Folder-Crawler\src\Folder-Crawler\bin\Debug\net6.0-windows\Microsoft.Msagl.WpfGraphControl.dll
+D:\GitHub\Folder-Crawler\src\Folder-Crawler\bin\Debug\net6.0-windows\Krypton.Docking.dll
+D:\GitHub\Folder-Crawler\src\Folder-Crawler\bin\Debug\net6.0-windows\Krypton.Navigator.dll
+D:\GitHub\Folder-Crawler\src\Folder-Crawler\bin\Debug\net6.0-windows\Krypton.Ribbon.dll
+D:\GitHub\Folder-Crawler\src\Folder-Crawler\bin\Debug\net6.0-windows\Krypton.Toolkit.dll
+D:\GitHub\Folder-Crawler\src\Folder-Crawler\bin\Debug\net6.0-windows\Krypton.Workspace.dll
+D:\GitHub\Folder-Crawler\src\Folder-Crawler\bin\Debug\net6.0-windows\UserControls.Krypton.PaletteSelectors.dll
+D:\GitHub\Folder-Crawler\src\Folder-Crawler\bin\Debug\net6.0-windows\MaterialDesignColors.dll
+D:\GitHub\Folder-Crawler\src\Folder-Crawler\bin\Debug\net6.0-windows\MaterialDesignThemes.Wpf.dll
+D:\GitHub\Folder-Crawler\src\Folder-Crawler\obj\Debug\net6.0-windows\Folder-Crawler.csproj.AssemblyReference.cache
+D:\GitHub\Folder-Crawler\src\Folder-Crawler\obj\Debug\net6.0-windows\Folder_Crawler.Form1.resources
+D:\GitHub\Folder-Crawler\src\Folder-Crawler\obj\Debug\net6.0-windows\Folder_Crawler.Properties.Resources.resources
+D:\GitHub\Folder-Crawler\src\Folder-Crawler\obj\Debug\net6.0-windows\Folder-Crawler.csproj.GenerateResource.cache
+D:\GitHub\Folder-Crawler\src\Folder-Crawler\obj\Debug\net6.0-windows\Folder-Crawler.GeneratedMSBuildEditorConfig.editorconfig
+D:\GitHub\Folder-Crawler\src\Folder-Crawler\obj\Debug\net6.0-windows\Folder-Crawler.AssemblyInfoInputs.cache
+D:\GitHub\Folder-Crawler\src\Folder-Crawler\obj\Debug\net6.0-windows\Folder-Crawler.AssemblyInfo.cs
+D:\GitHub\Folder-Crawler\src\Folder-Crawler\obj\Debug\net6.0-windows\Folder-Crawler.csproj.CoreCompileInputs.cache
+D:\GitHub\Folder-Crawler\src\Folder-Crawler\obj\Debug\net6.0-windows\Folder-Crawler.csproj.CopyComplete
+D:\GitHub\Folder-Crawler\src\Folder-Crawler\obj\Debug\net6.0-windows\Folder-Crawler.dll
+D:\GitHub\Folder-Crawler\src\Folder-Crawler\obj\Debug\net6.0-windows\refint\Folder-Crawler.dll
+D:\GitHub\Folder-Crawler\src\Folder-Crawler\obj\Debug\net6.0-windows\Folder-Crawler.pdb
+D:\GitHub\Folder-Crawler\src\Folder-Crawler\obj\Debug\net6.0-windows\Folder-Crawler.genruntimeconfig.cache
+D:\GitHub\Folder-Crawler\src\Folder-Crawler\obj\Debug\net6.0-windows\ref\Folder-Crawler.dll
