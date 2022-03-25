@@ -10,8 +10,8 @@
 ## Table of Contents
 * [General Information](#general-information)
 * [Requirements](#requirements)
-* [How To Compile](#howtocompile)
-* [How To Run](#howtorun)
+* [How To Compile](#how-to-compile)
+* [How To Run](#how-to-run)
 * [Project Status](#project-status)
 * [Creator](#creator)
 
