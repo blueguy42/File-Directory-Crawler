@@ -49,11 +49,11 @@
 ## Creator
 <table>
     <tr>
-      <td><a href="https://github.com/Audino723"><b>Ahmad Alfani Handoyo</b></a></td>
+      <td><a href="https://github.com/blueguy42"><b>Ahmad Alfani Handoyo</b></a></td>
       <td><b>13520023</b></td>
     </tr>
     <tr>
-      <td><a href="https://github.com/Audino723"><b>Felicia Sutandijo</b></a></td>
+      <td><a href="https://github.com/FelineJTD"><b>Felicia Sutandijo</b></a></td>
       <td><b>13520050</b></td>
     </tr>
     <tr>
