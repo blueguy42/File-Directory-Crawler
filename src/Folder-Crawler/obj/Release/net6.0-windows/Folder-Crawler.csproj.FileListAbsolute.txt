@@ -29,3 +29,34 @@ D:\GitHub\Folder-Crawler\src\Folder-Crawler\obj\Release\net6.0-windows\refint\Fo
 D:\GitHub\Folder-Crawler\src\Folder-Crawler\obj\Release\net6.0-windows\Folder-Crawler.pdb
 D:\GitHub\Folder-Crawler\src\Folder-Crawler\obj\Release\net6.0-windows\Folder-Crawler.genruntimeconfig.cache
 D:\GitHub\Folder-Crawler\src\Folder-Crawler\obj\Release\net6.0-windows\ref\Folder-Crawler.dll
+C:\Users\rioau\Documents\ITB\2Tingkat 2\Sem2\Tugas\STIMA\Folder-Crawler\src\Folder-Crawler\bin\Release\net6.0-windows\Folder-Crawler.exe
+C:\Users\rioau\Documents\ITB\2Tingkat 2\Sem2\Tugas\STIMA\Folder-Crawler\src\Folder-Crawler\bin\Release\net6.0-windows\Folder-Crawler.deps.json
+C:\Users\rioau\Documents\ITB\2Tingkat 2\Sem2\Tugas\STIMA\Folder-Crawler\src\Folder-Crawler\bin\Release\net6.0-windows\Folder-Crawler.runtimeconfig.json
+C:\Users\rioau\Documents\ITB\2Tingkat 2\Sem2\Tugas\STIMA\Folder-Crawler\src\Folder-Crawler\bin\Release\net6.0-windows\Folder-Crawler.dll
+C:\Users\rioau\Documents\ITB\2Tingkat 2\Sem2\Tugas\STIMA\Folder-Crawler\src\Folder-Crawler\bin\Release\net6.0-windows\Folder-Crawler.pdb
+C:\Users\rioau\Documents\ITB\2Tingkat 2\Sem2\Tugas\STIMA\Folder-Crawler\src\Folder-Crawler\bin\Release\net6.0-windows\AutomaticGraphLayout.dll
+C:\Users\rioau\Documents\ITB\2Tingkat 2\Sem2\Tugas\STIMA\Folder-Crawler\src\Folder-Crawler\bin\Release\net6.0-windows\AutomaticGraphLayout.Drawing.dll
+C:\Users\rioau\Documents\ITB\2Tingkat 2\Sem2\Tugas\STIMA\Folder-Crawler\src\Folder-Crawler\bin\Release\net6.0-windows\Microsoft.Msagl.GraphViewerGdi.dll
+C:\Users\rioau\Documents\ITB\2Tingkat 2\Sem2\Tugas\STIMA\Folder-Crawler\src\Folder-Crawler\bin\Release\net6.0-windows\Microsoft.Msagl.WpfGraphControl.dll
+C:\Users\rioau\Documents\ITB\2Tingkat 2\Sem2\Tugas\STIMA\Folder-Crawler\src\Folder-Crawler\bin\Release\net6.0-windows\Krypton.Docking.dll
+C:\Users\rioau\Documents\ITB\2Tingkat 2\Sem2\Tugas\STIMA\Folder-Crawler\src\Folder-Crawler\bin\Release\net6.0-windows\Krypton.Navigator.dll
+C:\Users\rioau\Documents\ITB\2Tingkat 2\Sem2\Tugas\STIMA\Folder-Crawler\src\Folder-Crawler\bin\Release\net6.0-windows\Krypton.Ribbon.dll
+C:\Users\rioau\Documents\ITB\2Tingkat 2\Sem2\Tugas\STIMA\Folder-Crawler\src\Folder-Crawler\bin\Release\net6.0-windows\Krypton.Toolkit.dll
+C:\Users\rioau\Documents\ITB\2Tingkat 2\Sem2\Tugas\STIMA\Folder-Crawler\src\Folder-Crawler\bin\Release\net6.0-windows\Krypton.Workspace.dll
+C:\Users\rioau\Documents\ITB\2Tingkat 2\Sem2\Tugas\STIMA\Folder-Crawler\src\Folder-Crawler\bin\Release\net6.0-windows\UserControls.Krypton.PaletteSelectors.dll
+C:\Users\rioau\Documents\ITB\2Tingkat 2\Sem2\Tugas\STIMA\Folder-Crawler\src\Folder-Crawler\bin\Release\net6.0-windows\MaterialDesignColors.dll
+C:\Users\rioau\Documents\ITB\2Tingkat 2\Sem2\Tugas\STIMA\Folder-Crawler\src\Folder-Crawler\bin\Release\net6.0-windows\MaterialDesignThemes.Wpf.dll
+C:\Users\rioau\Documents\ITB\2Tingkat 2\Sem2\Tugas\STIMA\Folder-Crawler\src\Folder-Crawler\obj\Release\net6.0-windows\Folder-Crawler.csproj.AssemblyReference.cache
+C:\Users\rioau\Documents\ITB\2Tingkat 2\Sem2\Tugas\STIMA\Folder-Crawler\src\Folder-Crawler\obj\Release\net6.0-windows\Folder_Crawler.Form1.resources
+C:\Users\rioau\Documents\ITB\2Tingkat 2\Sem2\Tugas\STIMA\Folder-Crawler\src\Folder-Crawler\obj\Release\net6.0-windows\Folder_Crawler.Properties.Resources.resources
+C:\Users\rioau\Documents\ITB\2Tingkat 2\Sem2\Tugas\STIMA\Folder-Crawler\src\Folder-Crawler\obj\Release\net6.0-windows\Folder-Crawler.csproj.GenerateResource.cache
+C:\Users\rioau\Documents\ITB\2Tingkat 2\Sem2\Tugas\STIMA\Folder-Crawler\src\Folder-Crawler\obj\Release\net6.0-windows\Folder-Crawler.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\rioau\Documents\ITB\2Tingkat 2\Sem2\Tugas\STIMA\Folder-Crawler\src\Folder-Crawler\obj\Release\net6.0-windows\Folder-Crawler.AssemblyInfoInputs.cache
+C:\Users\rioau\Documents\ITB\2Tingkat 2\Sem2\Tugas\STIMA\Folder-Crawler\src\Folder-Crawler\obj\Release\net6.0-windows\Folder-Crawler.AssemblyInfo.cs
+C:\Users\rioau\Documents\ITB\2Tingkat 2\Sem2\Tugas\STIMA\Folder-Crawler\src\Folder-Crawler\obj\Release\net6.0-windows\Folder-Crawler.csproj.CoreCompileInputs.cache
+C:\Users\rioau\Documents\ITB\2Tingkat 2\Sem2\Tugas\STIMA\Folder-Crawler\src\Folder-Crawler\obj\Release\net6.0-windows\Folder-Crawler.csproj.CopyComplete
+C:\Users\rioau\Documents\ITB\2Tingkat 2\Sem2\Tugas\STIMA\Folder-Crawler\src\Folder-Crawler\obj\Release\net6.0-windows\Folder-Crawler.dll
+C:\Users\rioau\Documents\ITB\2Tingkat 2\Sem2\Tugas\STIMA\Folder-Crawler\src\Folder-Crawler\obj\Release\net6.0-windows\refint\Folder-Crawler.dll
+C:\Users\rioau\Documents\ITB\2Tingkat 2\Sem2\Tugas\STIMA\Folder-Crawler\src\Folder-Crawler\obj\Release\net6.0-windows\Folder-Crawler.pdb
+C:\Users\rioau\Documents\ITB\2Tingkat 2\Sem2\Tugas\STIMA\Folder-Crawler\src\Folder-Crawler\obj\Release\net6.0-windows\Folder-Crawler.genruntimeconfig.cache
+C:\Users\rioau\Documents\ITB\2Tingkat 2\Sem2\Tugas\STIMA\Folder-Crawler\src\Folder-Crawler\obj\Release\net6.0-windows\ref\Folder-Crawler.dll

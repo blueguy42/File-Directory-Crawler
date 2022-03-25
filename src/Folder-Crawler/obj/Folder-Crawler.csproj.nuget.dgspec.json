@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\GitHub\\Folder-Crawler\\src\\Folder-Crawler\\Folder-Crawler.csproj": {}
+    "C:\\Users\\rioau\\Documents\\ITB\\2Tingkat 2\\Sem2\\Tugas\\STIMA\\Folder-Crawler\\src\\Folder-Crawler\\Folder-Crawler.csproj": {}
   },
   "projects": {
-    "D:\\GitHub\\Folder-Crawler\\src\\Folder-Crawler\\Folder-Crawler.csproj": {
+    "C:\\Users\\rioau\\Documents\\ITB\\2Tingkat 2\\Sem2\\Tugas\\STIMA\\Folder-Crawler\\src\\Folder-Crawler\\Folder-Crawler.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\GitHub\\Folder-Crawler\\src\\Folder-Crawler\\Folder-Crawler.csproj",
+        "projectUniqueName": "C:\\Users\\rioau\\Documents\\ITB\\2Tingkat 2\\Sem2\\Tugas\\STIMA\\Folder-Crawler\\src\\Folder-Crawler\\Folder-Crawler.csproj",
         "projectName": "Folder-Crawler",
-        "projectPath": "D:\\GitHub\\Folder-Crawler\\src\\Folder-Crawler\\Folder-Crawler.csproj",
-        "packagesPath": "C:\\Users\\ahmad\\.nuget\\packages\\",
-        "outputPath": "D:\\GitHub\\Folder-Crawler\\src\\Folder-Crawler\\obj\\",
+        "projectPath": "C:\\Users\\rioau\\Documents\\ITB\\2Tingkat 2\\Sem2\\Tugas\\STIMA\\Folder-Crawler\\src\\Folder-Crawler\\Folder-Crawler.csproj",
+        "packagesPath": "C:\\Users\\rioau\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\rioau\\Documents\\ITB\\2Tingkat 2\\Sem2\\Tugas\\STIMA\\Folder-Crawler\\src\\Folder-Crawler\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\ahmad\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\rioau\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
